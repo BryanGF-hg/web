@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<html lang="es">
+ <head>
+   <title>Bryan Glot Fong</title>
+   <meta charset="utf-8">
+   <!-- Etiquetas de posicionamiento --->
+   <meta name="description" content="Web de Bryan Glot Fong, estudiante">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="programacion,curso,diseño,estudiante...">
+    <meta name="author" content="Bryan Glot Fong">
+    <link rel="icon" href="bgf-favicon.png" type="image/png">
+	<meta property="og:title" content="Bryan Glot Fong">
+	<meta property="og:description" content="Web de Bryan Glot Fong, estudiante">
+	<meta property="og:image" content="bgf-favicon.png">
+	<meta property="og:url" content="https://github.com/BryanGF-hg">
+	<meta property="og:type" content="website">
+	<style>
+	/*
+	 ttf = TrueTypeFont
+	 otf = OpenTypeFont
+	*/
+	
+	 @font-face{
+	  font-family: "vanilla";
+	  src:url("Vanilla-Pancake.otf");
+	 }
+	 
+	 h1,h2,h3{
+	  color:LightSalmon;
+	 }
+	 
+	 body{
+	  background:LightCyan;
+	  font-family:vanilla;
+	 }
+	 
+     header,main,footer{
+	  width:900px; 			/*Establece la anchura de los elementos*/
+	  background: white;	/*Estable el color de fondo*/
+	  margin: auto; 		/*Centralo en pantalla*/
+	  padding: 20px; 		/* Pon un poco de margen interior*/
+	 }
+	 
+	 nav ul{
+		list-style-type:none; 		 /*Anula estilos de lista*/
+		margin:0px; 				 /*anula el margen exterior por defecto*/
+		padding:0px;				 /*anula el margen interior por defecto */
+		display:flex;				 /* Activa flex de izquierda a derecha */
+		gap:10px;					 /* Distancia entre los elementos flexbox o grid */
+		justify-content: center;   	/* Centrar los elementos de menu*/
+	 }
+	 
+	 nav ul li a{ 
+	   text-decoration:none; 	/* Anula el estilo de subrayado*/
+	   color:inherit;			/*Le pone el color que deberia tener */
+   	   color:white;				/* Fuerzo el color a blanco*/
+	   background:LightBlue;    /* El fondo de un color solido */
+	   padding:5px;			    /* Le pongo Margen interior */
+	   font-size:15px;		    /* Le pongo tamaño de letra */
+	   text-transform:uppercase; /* El texto va en mayusculas*/
+	   display:inline; 			/* Permito a los elementos que sean bloques*/
+	   width:60px; 				/* Su  anchura es de 60 pixeles*/
+	   text-align:center; 		/* Alineo el texto al centro*/
+	 }
+	 
+	 /* Un elemento inicio que tiene un hijo "imagen" */
+	 #inicio img{
+		width:100%; /* No quiero que la imagen se salga */
+	 }
+	 .bloque{
+	  display:flex; /* El bloque de texto e imagen quiero que sea flex */
+	  gap:20px;		/* Distancia entre los elementos */
+	  }
+	 .bloque img{
+	  flex:1;  		/* Ocupa una unidad flex */
+	  width:50%;	/* Ocula el 50% de la anchura */
+	  height:50%;   /* Ocula el 50% de la altura */
+	 }
+	 .bloque p{
+		 /* flex:1px;      No se coloca por hacer que la imagen tenga un aspecto raro     Ocupa una unidad flex */
+	  font-size:15px; 		 /* Edito el tamaño del texto */
+	  text-align:justify;    /* Edito la alineación del texto */
+	 }
+	 #desarrollo .bloque{
+	  flex-direction: row-reverse; /* Invertimos el orden para un elemento */
+	 }
+	 
+	 
+	 #contenedorportafolio{
+	  display:grid;  								/* Este elemento es una rejilla */
+	  grid-template-columns: auto auto auto;		/* Y tiene 3 columnas */
+	  gap:20px;										/* Separación entre los elementos */
+	 }
+	 #contenedor portafolio img{
+	  width: 100%; /* Quiero que la imagen no desborde */
+	 }
+	 iframe{
+	  flex:1;						/* Tiene una unidad flex */
+	 }
+	 
+	 form{
+		display:flex;				/* Quiero que el formulario sea flex */
+		flex-direction:column;		/* Y quiero que sea columna */
+		flex:1;						/* Tiene una unidad flex */
+		gap:10px;					/* Separación entre los elementos */
+	 }
+	 
+	
+	
+
+	</style>
+ </head>
+ <body>
+   <header>
+    <!---Esta es la cabecera de la pagina --->
+	<h1>Bryan Glot Fong</h1>
+	<h2>Estudiante</h2>
+	<nav>
+	 <ul>
+	  <li><a href="#inicio">Inicio</a></li>
+	  <li><a href="#paginaprincipal">Página Principal</a></li>
+	  <li><a href="#sobremi">Sobre Mi</a></li>
+	  <li><a href="#sobremi">Portafolio</a></li>
+	  <li><a href="#contacto">Contacto</a></li>
+	 </ul>
+	</nav>
+   </header>
+   
+   <main>
+    <!--- Esto es el contenido principal--->
+	
+	<section id="inicio">		<!--- Esto es inicio--->
+	 <h3>Inicio</h3>
+	 <div class="bloque">
+	  <img src="imagen-de-perfil.png" alt="Imagen de perfil">
+	  <p>
+	 Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis
+	  </p>
+	 </div>
+	</section>
+	
+	<section id="paginaprincipal">		<!--- Esto es página principal--->
+	 <div class="bloque">
+	 <h3>Página Principal</h3>
+	 <article>
+	  <h4>Primer Elemento de Página Principal</h4>
+	  <p>Descripción del elemento 1:Lorem ipsum dolor sit amet consectetur adipiscing elit.  </p>
+	  <img src="pfp-amarillo-radioactivo.png" alt="favicon">
+	 </article>
+	 
+	 <article>
+	  <h4>Segundo Elemento de Página Principal</h4>
+	  <p>Descripción del elemento 2:Lorem ipsum dolor sit amet consectetur adipiscing elit.	</p>
+	  <img src="pfp-immerverde.png" alt="favicon">
+	 </article>
+	 
+	 <article>
+	  <h4>Tercer Elemento de Página Principal</h4>
+	  <p>Descripción del elemento 3:Lorem ipsum dolor sit amet consectetur adipiscing elit.	</p>
+	  <img src="pfp-naranja.png" alt="favicon">
+	 </article>
+	 </div>
+	</section>
+	
+	
+	<section id="portafolio">		<!--- Esto es PORTAFOLIO --->
+	 <div id="contenedorportafolio">
+	 <h3>Portafolio</h3>
+	 <article>
+	  <h4>Primer Elemento de Portafolio</h4>
+	  <p>Descripción del elemento 1:Lorem ipsum dolor sit amet consectetur adipiscing elit.  </p>
+	  <img src="pfp-amarillo-radioactivo.png" alt="favicon">
+	 </article>
+	 
+	 <article>
+	  <h4>Segundo Elemento de Portafolio</h4>
+	  <p>Descripción del elemento 2:Lorem ipsum dolor sit amet consectetur adipiscing elit.	</p>
+	  <img src="pfp-immerverde.png" alt="favicon">
+	 </article>
+	 
+	 <article>
+	  <h4>Tercer Elemento de Portafolio</h4>
+	  <p>Descripción del elemento 3:Lorem ipsum dolor sit amet consectetur adipiscing elit.	</p>
+	  <img src="pfp-naranja.png" alt="favicon">
+	 </article>
+	 </div>
+	</section>
+	
+
+	
+	
+	<section id="sobremi">		<!--- Esto es sobremi--->
+	 <h3>Sobre mi</h3>
+	 <div class="bloque">
+	  <img src="doble-de-perfil.png" alt="Imagen de perfil">
+	  <p>
+	 Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis, e
+	  </p>
+	 </div>
+	</section>
+
+	<section id="contacto">		<!--- Esto es contacto--->
+	 <div class="bloque">
+	 <h3>Contacto</h3>
+	 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1495.4677130742432!2d-0.41004617718630937!3d39.50147641211951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd60456dc889478f%3A0x34e1876207a3d64!2sCEAC%20FP%20Valencia%20%F0%9F%8E%93%20Centro%20de%20Formaci%C3%B3n%20Profesional%20Oficial!5e0!3m2!1ses!2ses!4v1759912100631!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	 <form>
+	  <label for="nombre">Introduce tu nombre</label>
+	  <input type="text" id="nombre">
+	  
+	  <label for="email">Introduce tu email</label>
+	  <input type="text" id="email">
+	  <label for="email">Introduce tu mensaje</label>
+	  <textarea id="mensaje"></textarea>
+	  <input type="submit">
+	 </form>
+	 
+	 </div>
+	</section>
+   </main>
+   
+   <footer>
+	<!---Esto es el pie de pagina --->
+	<a href="https://facebook.com/****">Facebook</a>
+	<a href="https://instagram.com/****">Instagram</a>
+	<a href="https://github.com/BryanGF-hg">GitHub</a>
+	<a href="https://linkeldn.com/BryanGF-hg">Linkeldn</a>	
+   </footer>
+   
+ </body>
+</html>
