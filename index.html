@@ -41,6 +41,8 @@
 	  padding: 20px; 		/* Pon un poco de margen interior*/
 	 }
 	 
+/*NAV*/	 
+	 
 	 nav ul{
 		list-style-type:none; 		 /*Anula estilos de lista*/
 		margin:0px; 				 /*anula el margen exterior por defecto*/
@@ -67,6 +69,7 @@
 	 #inicio img{
 		width:100%; /* No quiero que la imagen se salga */
 	 }
+	 
 	 .bloque{
 	  display:flex; /* El bloque de texto e imagen quiero que sea flex */
 	  gap:20px;		/* Distancia entre los elementos */
@@ -78,7 +81,7 @@
 	 }
 	 .bloque p{
 		 /* flex:1px;      No se coloca por hacer que la imagen tenga un aspecto raro     Ocupa una unidad flex */
-	  font-size:15px; 		 /* Edito el tamaño del texto */
+	  font-size:25px; 		 /* Edito el tamaño del texto */
 	  text-align:justify;    /* Edito la alineación del texto */
 	 }
 	 #desarrollo .bloque{
@@ -105,6 +108,29 @@
 		gap:10px;					/* Separación entre los elementos */
 	 }
 	 
+
+
+
+
+/* BLOQUE SOBREMI*/
+
+	 .bloque-sobremi{
+	  display:flex; /* El bloque de texto e imagen quiero que sea flex */
+	  gap:20px;		/* Distancia entre los elementos */
+	  }
+	 .bloque-sobremi img{
+	  flex:1;  		/* Ocupa una unidad flex */
+	  width:25%;	/* Ocula el 50% de la anchura */
+	  height:50%;   /* Ocula el 50% de la altura */
+	 }
+	 .bloque-sobremi p{
+		 /* flex:1px;      No se coloca por hacer que la imagen tenga un aspecto raro     Ocupa una unidad flex */
+	  font-size:25px; 		 /* Edito el tamaño del texto */
+	  text-align:justify;    /* Edito la alineación del texto */
+	 }
+	 #desarrollo .bloque-sobremi{
+	  flex-direction: row-reverse; /* Invertimos el orden para un elemento */
+	 }
 	
 	
 
@@ -134,7 +160,7 @@
 	 <div class="bloque">
 	  <img src="imagen-de-perfil.png" alt="Imagen de perfil">
 	  <p>
-	 Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis
+	 Este es el inicio de mi página web. Resumiendo los contenidos comprendidos, tenemos una sección Página Principal, un Portafolio y un Contacto
 	  </p>
 	 </div>
 	</section>
@@ -167,8 +193,8 @@
 	 <div id="contenedorportafolio">
 	 <h3>Portafolio</h3>
 	 <article>
-	  <h4>Primer Elemento de Portafolio</h4>
-	  <p>Descripción del elemento 1:Lorem ipsum dolor sit amet consectetur adipiscing elit.  </p>
+	  <h4>Primer Proyecto</h4>
+	  <p>Descripción del elemento 1: Un sitio web capaz de mostrar la información necesaria para el CV, proyectos  </p>
 	  <img src="pfp-amarillo-radioactivo.png" alt="favicon">
 	 </article>
 	 
@@ -191,10 +217,10 @@
 	
 	<section id="sobremi">		<!--- Esto es sobremi--->
 	 <h3>Sobre mi</h3>
-	 <div class="bloque">
-	  <img src="doble-de-perfil.png" alt="Imagen de perfil">
+	 <div class="bloque-sobremi">
+	  <img src="ImagenFormaldeBryanGlotFong.jpg" alt="Imagen de perfil">
 	  <p>
-	 Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis, e
+	 Soy Bryan Glot Fong, un estudiante que ahora mismo está cursando el primer anyo de Técnico Superior de Desarrollo de Aplicaciones Multiplataforma. 
 	  </p>
 	 </div>
 	</section>
@@ -204,12 +230,12 @@
 	 <h3>Contacto</h3>
 	 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1495.4677130742432!2d-0.41004617718630937!3d39.50147641211951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd60456dc889478f%3A0x34e1876207a3d64!2sCEAC%20FP%20Valencia%20%F0%9F%8E%93%20Centro%20de%20Formaci%C3%B3n%20Profesional%20Oficial!5e0!3m2!1ses!2ses!4v1759912100631!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 	 <form>
-	  <label for="nombre">Introduce tu nombre</label>
+	  <label for="nombre">Introduce tu nombre:</label>
 	  <input type="text" id="nombre">
 	  
-	  <label for="email">Introduce tu email</label>
+	  <label for="email">Introduce tu email:</label>
 	  <input type="text" id="email">
-	  <label for="email">Introduce tu mensaje</label>
+	  <label for="email">Introduce tu mensaje:</label>
 	  <textarea id="mensaje"></textarea>
 	  <input type="submit">
 	 </form>
