@@ -3,254 +3,145 @@
  <head>
    <title>Bryan Glot Fong</title>
    <meta charset="utf-8">
-   <!-- Etiquetas de posicionamiento --->
-   <meta name="description" content="Web de Bryan Glot Fong, estudiante">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="programacion,curso,diseño,estudiante...">
-    <meta name="author" content="Bryan Glot Fong">
-    <link rel="icon" href="bgf-favicon.png" type="image/png">
-	<meta property="og:title" content="Bryan Glot Fong">
-	<meta property="og:description" content="Web de Bryan Glot Fong, estudiante">
-	<meta property="og:image" content="bgf-favicon.png">
-	<meta property="og:url" content="https://github.com/BryanGF-hg">
-	<meta property="og:type" content="website">
 	<style>
-	/*
-	 ttf = TrueTypeFont
-	 otf = OpenTypeFont
-	*/
-	
-	 @font-face{
-	  font-family: "vanilla";
-	  src:url("Vanilla-Pancake.otf");
-	 }
 	 
-	 h1,h2,h3{
-	  color:LightSalmon;
-	 }
+	 body{background:#FFEAD2;margin:0;padding:20px;}
+	 #imagen-de-fondo{width:100%;height:150px;object-fit:cover;}
+	 form{display:flex;flex-direction:column;flex:1;gap:5px;margin:5px;}
+	 footer{background:#FFFFFF;text-align:center;}
+	 footer a{text-decoration:none;color:#008080;}
 	 
-	 body{
-	  background:LightCyan;
-	  font-family:vanilla;
-	 }
+	 nav ul{background:#fffad7;display:flex;justify-content:center;gap:10px;padding:5px;}
+	 nav ul li a{text-decoration:none;color:#008080;}
 	 
-     header,main,footer{
-	  width:900px; 			/*Establece la anchura de los elementos*/
-	  background: white;	/*Estable el color de fondo*/
-	  margin: auto; 		/*Centralo en pantalla*/
-	  padding: 20px; 		/* Pon un poco de margen interior*/
-	 }
+	 .secciones-contenedor{display:flex;gap:20px;}
+	 section{background:#FFFFFF;}
+	 .secciones-contenedor h4{margin:20px;padding:5px;}
+	 section.izquierda{width:150px;}
+	 section.izquierda h4{margin:0;padding:0;}
+	 section.izquierda li{margin:2;padding:0;}
+	 section.izquierda a{text-decoration:none;}
 	 
-/*NAV*/	 
+	 section.centro{width:1000px;}
 	 
-	 nav ul{
-		list-style-type:none; 		 /*Anula estilos de lista*/
-		margin:0px; 				 /*anula el margen exterior por defecto*/
-		padding:0px;				 /*anula el margen interior por defecto */
-		display:flex;				 /* Activa flex de izquierda a derecha */
-		gap:10px;					 /* Distancia entre los elementos flexbox o grid */
-		justify-content: center;   	/* Centrar los elementos de menu*/
-	 }
+	 #centro-capa1{display:flex;}
+	 #centro-capa1 h1{margin:25px;}
+	 #centro-capa_madre img{flex:1;width:30%;height:30%;}
+	 section.derecha{width:150px;}
 	 
-	 nav ul li a{ 
-	   text-decoration:none; 	/* Anula el estilo de subrayado*/
-	   color:inherit;			/*Le pone el color que deberia tener */
-   	   color:white;				/* Fuerzo el color a blanco*/
-	   background:LightBlue;    /* El fondo de un color solido */
-	   padding:5px;			    /* Le pongo Margen interior */
-	   font-size:15px;		    /* Le pongo tamaño de letra */
-	   text-transform:uppercase; /* El texto va en mayusculas*/
-	   display:inline; 			/* Permito a los elementos que sean bloques*/
-	   width:60px; 				/* Su  anchura es de 60 pixeles*/
-	   text-align:center; 		/* Alineo el texto al centro*/
-	 }
-	 
-	 /* Un elemento inicio que tiene un hijo "imagen" */
-	 #inicio img{
-		width:100%; /* No quiero que la imagen se salga */
-	 }
-	 
-	 .bloque{
-	  display:flex; /* El bloque de texto e imagen quiero que sea flex */
-	  gap:20px;		/* Distancia entre los elementos */
-	  }
-	 .bloque img{
-	  flex:1;  		/* Ocupa una unidad flex */
-	  width:50%;	/* Ocula el 50% de la anchura */
-	  height:50%;   /* Ocula el 50% de la altura */
-	 }
-	 .bloque p{
-		 /* flex:1px;      No se coloca por hacer que la imagen tenga un aspecto raro     Ocupa una unidad flex */
-	  font-size:25px; 		 /* Edito el tamaño del texto */
-	  text-align:justify;    /* Edito la alineación del texto */
-	 }
-	 #desarrollo .bloque{
-	  flex-direction: row-reverse; /* Invertimos el orden para un elemento */
-	 }
-	 
-	 
-	 #contenedorportafolio{
-	  display:grid;  								/* Este elemento es una rejilla */
-	  grid-template-columns: auto auto auto;		/* Y tiene 3 columnas */
-	  gap:20px;										/* Separación entre los elementos */
-	 }
-	 #contenedor portafolio img{
-	  width: 100%; /* Quiero que la imagen no desborde */
-	 }
-	 iframe{
-	  flex:1;						/* Tiene una unidad flex */
-	 }
-	 
-	 form{
-		display:flex;				/* Quiero que el formulario sea flex */
-		flex-direction:column;		/* Y quiero que sea columna */
-		flex:1;						/* Tiene una unidad flex */
-		gap:10px;					/* Separación entre los elementos */
-	 }
-	 
+	 ul{list-style:none;margin:0;padding:0;}
+	 li{padding:5px;margin:4px;}
 
-
-
-
-/* BLOQUE SOBREMI*/
-
-	 .bloque-sobremi{
-	  display:flex; /* El bloque de texto e imagen quiero que sea flex */
-	  gap:20px;		/* Distancia entre los elementos */
-	  }
-	 .bloque-sobremi img{
-	  flex:1;  		/* Ocupa una unidad flex */
-	  width:25%;	/* Ocula el 50% de la anchura */
-	  height:50%;   /* Ocula el 50% de la altura */
-	 }
-	 .bloque-sobremi p{
-		 /* flex:1px;      No se coloca por hacer que la imagen tenga un aspecto raro     Ocupa una unidad flex */
-	  font-size:25px; 		 /* Edito el tamaño del texto */
-	  text-align:justify;    /* Edito la alineación del texto */
-	 }
-	 #desarrollo .bloque-sobremi{
-	  flex-direction: row-reverse; /* Invertimos el orden para un elemento */
-	 }
-	
-	
 
 	</style>
  </head>
- <body>
-   <header>
-    <!---Esta es la cabecera de la pagina --->
-	<h1>Bryan Glot Fong</h1>
-	<h2>Estudiante</h2>
-	<nav>
-	 <ul>
-	  <li><a href="#inicio">Inicio</a></li>
-	  <li><a href="#paginaprincipal">Página Principal</a></li>
-	  <li><a href="#sobremi">Sobre Mi</a></li>
-	  <li><a href="#sobremi">Portafolio</a></li>
-	  <li><a href="#contacto">Contacto</a></li>
-	 </ul>
-	</nav>
-   </header>
+ <body>	
+  <header>
+   <img id="imagen-de-fondo" src="imagen-de-fondo.png" alt="Imagen de fondo" >
+  	<nav>
+	   <ul>
+	     <li><a href="#centro-topping">Inicio</a></li>
+	     <li><a href="#centro-capa1">Contenido Principal</a></li>
+	     <li><a href="#centro-capa_madre">Sobre mi</a></li>
+	     <li><a href="#centro-plato">Contacto</a></li>	    
+	   </ul>
+	  </nav>
+  </header>
+  <div class="secciones-contenedor">
+   <section class="izquierda">
+	    <h4>Repositorios Activos:</h4>
+	     <ul>
+	     <li><a href="https://github.com/BryanGF-hg/Programacion2526-1DAM">Programación</a></li>
+	     <li><a href="#https://github.com/BryanGF-hg/Bases-de-Datos2526-1DAM">Bases de Datos</a></li>
+	     <li><a href="https://github.com/BryanGF-hg/Proyecto-Intermodular-1DAM">Proyecto Intermodular</a></li>
+	     <li><a href="https://github.com/BryanGF-hg/Lenguajes-de-Marcas-1DAM">Lenguajes de Marcas</a></li>
+	     
+	     <h4>Repos Secundarios:</h4>
+	     <li><a href="https://github.com/BryanGF-hg/practica-git-individual">Práctica Git</a></li>
+	     <li><a href="https://github.com/BryanGF-hg/Imagenes-Grem">Imagenes Grem</a></li>
+	    </ul>
+   </section> 
    
-   <main>
-    <!--- Esto es el contenido principal--->
-	
-	<section id="inicio">		<!--- Esto es inicio--->
-	 <h3>Inicio</h3>
-	 <div class="bloque">
-	  <img src="imagen-de-perfil.png" alt="Imagen de perfil">
-	  <p>
-	 Este es el inicio de mi página web. Resumiendo los contenidos comprendidos, tenemos una sección Página Principal, un Portafolio y un Contacto
-	  </p>
-	 </div>
-	</section>
-	
-	<section id="paginaprincipal">		<!--- Esto es página principal--->
-	 <div class="bloque">
-	 <h3>Página Principal</h3>
-	 <article>
-	  <h4>Primer Elemento de Página Principal</h4>
-	  <p>Descripción del elemento 1:Lorem ipsum dolor sit amet consectetur adipiscing elit.  </p>
-	  <img src="pfp-amarillo-radioactivo.png" alt="favicon">
-	 </article>
-	 
-	 <article>
-	  <h4>Segundo Elemento de Página Principal</h4>
-	  <p>Descripción del elemento 2:Lorem ipsum dolor sit amet consectetur adipiscing elit.	</p>
-	  <img src="pfp-immerverde.png" alt="favicon">
-	 </article>
-	 
-	 <article>
-	  <h4>Tercer Elemento de Página Principal</h4>
-	  <p>Descripción del elemento 3:Lorem ipsum dolor sit amet consectetur adipiscing elit.	</p>
-	  <img src="pfp-naranja.png" alt="favicon">
-	 </article>
-	 </div>
-	</section>
-	
-	
-	<section id="portafolio">		<!--- Esto es PORTAFOLIO --->
-	 <div id="contenedorportafolio">
-	 <h3>Portafolio</h3>
-	 <article>
-	  <h4>Primer Proyecto</h4>
-	  <p>Descripción del elemento 1: Un sitio web capaz de mostrar la información necesaria para el CV, proyectos  </p>
-	  <img src="pfp-amarillo-radioactivo.png" alt="favicon">
-	 </article>
-	 
-	 <article>
-	  <h4>Segundo Elemento de Portafolio</h4>
-	  <p>Descripción del elemento 2:Lorem ipsum dolor sit amet consectetur adipiscing elit.	</p>
-	  <img src="pfp-immerverde.png" alt="favicon">
-	 </article>
-	 
-	 <article>
-	  <h4>Tercer Elemento de Portafolio</h4>
-	  <p>Descripción del elemento 3:Lorem ipsum dolor sit amet consectetur adipiscing elit.	</p>
-	  <img src="pfp-naranja.png" alt="favicon">
-	 </article>
-	 </div>
-	</section>
-	
+   <section class="centro">
+    <div id="centro-topping">
+     <h1>Inicio</h1>
+      <ul>
+      <li>Este es el inicio de mi página web. Resumiendo los contenidos comprendidos con varias secciones, una donde están los Repositorios, una principal(Esta misma!) y una "Importante"</li>
+	     <li>Dentro de los Repositorios, encontramos 2 diferentes categorias: una activa y una secundaria. Ambas son importantes</li>
+	     <li>Dentro de Importante, tenemos los repositorios que se distinguen por sí mismo. También tenemos proyectos que son aplicaciones o cosas pequeñas/grandes que pueden alguna función</li>
+	    </ul>
+	   </div>
+	   
+    <div id="centro-capa1">
+     <h1>Contenido principal</h1>
+     <article>
+      <h4>Portafolio</h4>
+   
+      <ul><a href="https://bryangf-hg.github.io/portafolio/">Portafolio</a></ul>
+      	  <img src="pfp-amarillo-radioactivo.png" alt="favicon-capa1">
+     </article>
+     <article>
+      <h4>Curriculum</h4>
+      <ul><a href="https://bryangf-hg.github.io/portafolio/">Curriculum</a></ul>
+      	  <img src="pfp-immerverde.png" alt="favicon-capa1">
+     </article>
+     <article>
+      <h4>Sitio Web</h4>
+      <ul><a href="https://bryangf-hg.github.io/web/">!</a></ul>
+      	  <img src="pfp-naranja.png" alt="favicon-capa1">
+     </article>          
+	   </div>
+    <div id="centro-capa_madre">
+     <h1>Bryan Glot Fong</h1>
+     <img src="ImagenFormaldeBryanGlotFong.jpg" alt="Imagen de perfil">
+     <ul>
+      <li>Soy Bryan Glot Fong, un estudiante que ahora mismo está cursando el primer anyo de Técnico Superior de Desarrollo de Aplicaciones Multiplataforma</li>
+     </ul>
+	   </div>
+    <div id="centro-plato">
+     <h1>Sobre mi</h1>
+	    <form>
+	     <p><b>Formulario(Preguntame para más información!)</b></p>
+	     <label for="nombre">Introduce tu nombre:</label>
+	     <input type="text" id="nombre">
+	     
+	     <label for="email">Introduce tu email:</label>
+	     <input type="text" id="email">
+	     <label for="mensaje">Introduce tu mensaje:</label>
+	     <textarea id="mensaje"></textarea>
+	     <input type="submit">
+	    </form>        	   	   
+   </section> 
+ 
+   <section class="derecha">
+	     <h4>Repos Importantes:</h4>
+	     <ul>
+	       <li><a href="https://github.com/BryanGF-hg/web">!</a></li>
+	       <li>
+	        <a href="https://github.com/BryanGF-hg/portafolio">Portafolio </a><a href="https://bryangf-hg.github.io/portafolio/">--Live</a>
+	       </li>
+	       <li>
+	        <a href="https://github.com/BryanGF-hg/curriculum">Curriculum </a>
+	        <a href="https://bryangf-hg.github.io/curriculum/">--Live</a>
+	       </li>
+	     </ul> 
+	       
+	    <h4>Proyectos:</h4>
+	     <ul>
+	     <li><a href="https://github.com/BryanGF-hg/AutoCYP">AutoCYP</a></li>
+	     <li><a href="#i">I</a></li>
+	     <li><a href="#u">U</a></li>
+	     <li><a href="#e">E</a></li>
+	     <li><a href="#o">O</a></li>
 
-	
-	
-	<section id="sobremi">		<!--- Esto es sobremi--->
-	 <h3>Sobre mi</h3>
-	 <div class="bloque-sobremi">
-	  <img src="ImagenFormaldeBryanGlotFong.jpg" alt="Imagen de perfil">
-	  <p>
-	 Soy Bryan Glot Fong, un estudiante que ahora mismo está cursando el primer anyo de Técnico Superior de Desarrollo de Aplicaciones Multiplataforma. 
-	  </p>
-	 </div>
-	</section>
-
-	<section id="contacto">		<!--- Esto es contacto--->
-	 <div class="bloque">
-	 <h3>Contacto</h3>
-	 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1495.4677130742432!2d-0.41004617718630937!3d39.50147641211951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd60456dc889478f%3A0x34e1876207a3d64!2sCEAC%20FP%20Valencia%20%F0%9F%8E%93%20Centro%20de%20Formaci%C3%B3n%20Profesional%20Oficial!5e0!3m2!1ses!2ses!4v1759912100631!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-	 <form>
-	  <label for="nombre">Introduce tu nombre:</label>
-	  <input type="text" id="nombre">
-	  
-	  <label for="email">Introduce tu email:</label>
-	  <input type="text" id="email">
-	  <label for="email">Introduce tu mensaje:</label>
-	  <textarea id="mensaje"></textarea>
-	  <input type="submit">
-	 </form>
-	 
-	 </div>
-	</section>
-   </main>
-   
-   <footer>
-	<!---Esto es el pie de pagina --->
-	<a href="https://facebook.com/****">Facebook</a>
-	<a href="https://instagram.com/****">Instagram</a>
-	<a href="https://github.com/BryanGF-hg">GitHub</a>
-	<a href="https://linkeldn.com/BryanGF-hg">Linkeldn</a>	
-   </footer>
-   
+   </section> 
+  </div>   
+  <footer>
+   <a href="mailto:bryanglot@gmail.com" id="mostrar-correo">Correo</a>
+   <a href="mailto:bryan.alexander.glot.fong@alu.ceacfp.es"  id="mostrar-correo_administrativo">Correo Administrativo</a>
+   <a href="https://github.com/BryanGF-hg">GitHub</a>
+   <a href="https://linkeldn.com/BryanGF-hg">Linkeldn</a>	
+  </footer>  
  </body>
+ 
 </html>
