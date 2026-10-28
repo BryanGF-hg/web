@@ -1,0 +1,161 @@
+/* Importamos las fuentes de Google: Ubuntu (Mint/Debian) y Nunito (Casual) */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Ubuntu:wght@400;500;700&display=swap');
+
+:root{
+  --menta: #A8E6CF;
+  --te: #3E7C6B;
+  --naranja: #FF8A3D;
+  --amanecer: #F2C14E;
+  --tinta: #2A2E2B;
+  --papel: #F6F4EF;
+  --linea: #DAD6CE;
+  --muted: #6E7268;
+  
+  /* Tipografías */
+  --font-casual: 'Nunito', 'Comic Sans MS', sans-serif;
+  --font-mono: 'Ubuntu', 'Ubuntu Mono', monospace;
+}
+
+*{ box-sizing: border-box; }
+html, body { 
+  margin: 0; padding: 0; background: #d9d9d9; color: var(--tinta);
+  font-family: var(--font-mono); /* Ubuntu para textos largos y legibilidad */
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+img { display: block; max-width: 100%; }
+
+/* Páginas A4 */
+.page {
+  position: relative; width: 297mm; height: 210mm;
+  margin: 10mm auto; padding: 17mm 19mm 15mm;
+  background: #fff; overflow: hidden;
+  page-break-after: always; break-after: page;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.page:last-child { page-break-after: auto; break-after: auto; }
+.soft-page { background: var(--papel); }
+.menta-page { background: var(--menta); color: var(--tinta); }
+.te-page { background: var(--te); color: #fff; }
+
+/* Cabeceras */
+.page-header {
+  position: absolute; top: 9mm; left: 19mm; right: 19mm;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 9pt; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: #777;
+}
+.light-header { color: rgba(255,255,255,.75); }
+
+/* Títulos con la fuente casual */
+h1, h2, h3, h4 { 
+  font-family: var(--font-casual); 
+  line-height: 1.1; 
+  letter-spacing: -0.02em; 
+  margin: 0; 
+}
+h1 { font-size: 52pt; }
+h2 { font-size: 32pt; }
+h3 { font-size: 18pt; }
+
+.eyebrow {
+  font-family: var(--font-mono); /* Mantenemos el eyebrow/etiqueta en Ubuntu */
+  font-size: 10pt; line-height: 1; text-transform: uppercase;
+  letter-spacing: .15em; font-weight: 700; margin: 0 0 8mm; color: var(--te);
+}
+.accent-naranja { color: var(--naranja) !important; }
+.accent-amanece { color: var(--amanecer) !important; }
+
+/* Portada */
+.cover { padding: 18mm 20mm; display: flex; flex-direction: column; justify-content: space-between; }
+.cover h1 { font-size: 62pt; line-height: 0.95; margin-top: 10mm; }
+.cover .lead { font-size: 15pt; line-height: 1.5; max-width: 170mm; margin-top: 6mm; color: rgba(255,255,255,.85); }
+.cover-meta { display: flex; justify-content: space-between; font-size: 9pt; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,.65); }
+
+/* Rejilla genérica */
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 18mm; margin-top: 25mm; align-items: start; }
+.split p { font-size: 12pt; line-height: 1.6; color: #4d5147; margin-bottom: 4mm; }
+
+/* Principios (4 columnas) */
+.grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 5mm; position: absolute; left: 19mm; right: 19mm; bottom: 17mm; }
+.grid-4 article { border-top: 2px solid var(--linea); padding-top: 5mm; }
+.grid-4 span { color: var(--naranja); font-size: 12pt; font-weight: 800; font-family: var(--font-casual); }
+.grid-4 h3 { font-size: 18pt; margin: 3mm 0 2mm; }
+.grid-4 p { font-size: 10pt; line-height: 1.5; color: var(--muted); margin: 0; }
+
+/* Swatches de color */
+.color-grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 6mm; height: 160mm; margin-top: 23mm; }
+.swatch { padding: 10mm; display: flex; flex-direction: column; justify-content: space-between; border-radius: 4mm; }
+.swatch h2 { font-size: 32pt; margin: 2mm 0 1mm; }
+.swatch p { margin: 0; opacity: .85; font-size: 11pt; font-family: var(--font-mono); }
+.swatch-copy > span { font-size: 9pt; letter-spacing: .15em; text-transform: uppercase; font-weight: 700; }
+.color-values { display: flex; gap: 10mm; align-items: flex-end; font-size: 9.5pt; font-family: var(--font-mono); }
+.color-values b { font-size: 16pt; }
+.sw-menta { background: var(--menta); color: var(--tinta); }
+.sw-te { background: var(--te); color: #fff; }
+.sw-naranja { background: var(--naranja); color: var(--tinta); }
+.sw-amanecer { background: var(--amanecer); color: var(--tinta); }
+
+/* Proporción de uso */
+.ratio-intro { margin-top: 28mm; }
+.ratio-bar { height: 55mm; display: flex; margin-top: 15mm; overflow: hidden; border-radius: 4mm; }
+.ratio-bar > div { display: flex; flex-direction: column; justify-content: flex-end; padding: 7mm; }
+.ratio-bar span { font-size: 24pt; font-weight: 800; font-family: var(--font-casual); }
+.ratio-bar b { font-size: 10pt; text-transform: uppercase; letter-spacing: .12em; font-family: var(--font-mono); }
+.ratio-a { width: 45%; background: var(--menta); color: var(--tinta); }
+.ratio-b { width: 25%; background: #e9e5dc; color: var(--tinta); }
+.ratio-c { width: 20%; background: var(--te); color: #fff; }
+.ratio-d { width: 10%; background: var(--naranja); color: var(--tinta); }
+.ratio-notes { display: grid; grid-template-columns: repeat(4,1fr); gap: 6mm; margin-top: 10mm; font-size: 10pt; line-height: 1.55; color: #575a52; }
+
+/* Tipografía */
+.type-layout { display: grid; grid-template-columns: .75fr 1.25fr; gap: 14mm; align-items: center; height: 100%; padding-top: 8mm; }
+.type-layout.reversed { grid-template-columns: 1.3fr .7fr; }
+.type-title p:not(.eyebrow) { font-size: 12pt; line-height: 1.6; color: var(--muted); }
+.type-scale { margin-top: 7mm; border-top: 1px solid var(--linea); }
+.type-scale span { display: flex; justify-content: space-between; padding: 3mm 0; border-bottom: 1px solid var(--linea); font-size: 10pt; }
+
+/* Área de protección */
+.protection-layout { display: grid; grid-template-columns: 1.25fr .75fr; gap: 20mm; align-items: center; height: 100%; padding-top: 8mm; }
+.protection-demo { position: relative; height: 120mm; border: 1px dashed #b8b2ba; display: flex; align-items: center; justify-content: center; background: #fbfbfb; border-radius: 4mm; }
+.protection-demo img { width: 100mm; }
+.protection-demo:before { content: ""; position: absolute; inset: 25mm 28mm; border: 1px solid var(--naranja); border-radius: 2mm; }
+.clearspace { position: absolute; color: var(--naranja); font-size: 14pt; font-weight: 800; font-family: var(--font-casual); }
+.clear-top { top: 13mm; left: 50%; }.clear-bottom { bottom: 13mm; left: 50%; }
+.clear-left { left: 17mm; top: 50%; }.clear-right { right: 17mm; top: 50%; }
+.mini-rule { display: flex; justify-content: space-between; border-top: 1px solid var(--linea); padding: 4mm 0; font-size: 10.5pt; }
+.mini-rule strong { color: var(--te); }
+
+/* Aplicaciones */
+.applications-grid { display: grid; grid-template-columns: 1.35fr .8fr .8fr; gap: 8mm; margin-top: 25mm; height: 145mm; }
+.app-card { border-radius: 4mm; overflow: hidden; box-shadow: 0 2mm 6mm rgba(40,50,40,.08); }
+.browser-card { background: #fff; }
+.browser-top { height: 11mm; background: #ece9e5; display: flex; align-items: center; gap: 2mm; padding: 0 4mm; }
+.browser-top i { width: 2.5mm; height: 2.5mm; border-radius: 50%; background: #bdb6be; }
+.browser-content { height: calc(100% - 11mm); background: var(--te); color: #fff; padding: 12mm; display: flex; flex-direction: column; justify-content: space-between; }
+.browser-content span { font-size: 8pt; color: var(--amanecer); font-weight: 700; letter-spacing: .16em; }
+.browser-content h3 { font-size: 26pt; line-height: 1.05; margin: 4mm 0; }
+.browser-content b { font-size: 9pt; }
+.stationery-card { background: #ded9d3; padding: 10mm; display: flex; align-items: center; }
+.paper-sheet { background: #fff; width: 100%; height: 100%; padding: 8mm; display: flex; flex-direction: column; border-radius: 2mm; }
+.letter-lines { height: 2mm; background: #e8e5e0; margin-top: 11mm; border-radius: 1mm; }
+.letter-lines.short { width: 65%; margin-top: 3mm; }
+.paper-sheet small { margin-top: auto; font-size: 8pt; color: #777; }
+.social-card { background: var(--menta); padding: 8mm; }
+.social-inner { height: 100%; border: 1px solid rgba(42,46,43,.25); padding: 7mm; display: flex; flex-direction: column; border-radius: 2mm; }
+.dot { width: 8mm; height: 8mm; background: var(--naranja); transform: rotate(45deg); margin-bottom: auto; }
+.social-inner span { font-weight: 700; font-size: 9pt; letter-spacing: .15em; }
+.social-inner h3 { font-size: 24pt; line-height: 1.05; margin: 3mm 0; }
+.linea-te { height: 2mm; background: var(--te); width: 27mm; margin-top: auto; }
+
+/* Cierre */
+.final-page { display: flex; flex-direction: column; justify-content: center; }
+.final-content { max-width: 220mm; }
+.final-content h2 { font-size: 44pt; margin-bottom: 8mm; }
+.final-content > p:last-child { font-size: 13pt; color: rgba(255,255,255,.8); }
+
+@media print {
+  @page { size: 297mm 210mm; margin: 0; }
+  html, body { width: 297mm; margin: 0!important; padding: 0!important; background: #fff!important; }
+  .page { margin: 0; box-shadow: none; page-break-after: always; }
+  .page:last-child { page-break-after: auto; }
+}

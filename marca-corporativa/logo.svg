@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500" role="img" aria-label="Logo Bryan Glot Fong">
+  <title>Bryan Glot Fong</title>
+  
+  <!-- Fondo opcional (puedes quitarlo si quieres fondo transparente) -->
+  <!-- <rect width="500" height="500" fill="#ffffff" /> -->
+
+  <g transform="translate(10, 10)">
+    <!-- 1. Triángulo Verde Té (Izquierda/Fondo) -->
+    <path d="M 225 80 L 365 320 L 85 320 Z" fill="#3E7C6B" />
+
+    <!-- 2. Triángulo Menta (Derecha/Fondo) -->
+    <path d="M 325 160 L 445 355 L 205 355 Z" fill="#A8E6CF" />
+
+    <!-- 3. Triángulo Naranja (Centro/Frente) -->
+    <!-- Se añade un borde blanco para el efecto de separación (o usa stroke="#ffffff" stroke-width="12") -->
+    <path d="M 230 230 L 355 455 L 105 455 Z" fill="#FF8A3D" stroke="#ffffff" stroke-width="14" stroke-linejoin="round" />
+
+    <!-- 4. Línea Amarilla Amanecer (Diagonal izquierda) -->
+    <path d="M 45 455 L 170 85" stroke="#F2C14E" stroke-width="8" stroke-linecap="round" fill="none" />
+    
+    <!-- Pequeño detalle: la base de la línea amarilla se conecta con el triángulo verde -->
+    <path d="M 45 455 L 105 420" stroke="#F2C14E" stroke-width="8" stroke-linecap="round" fill="none" />
+  </g>
+</svg>
