@@ -1,0 +1,354 @@
+/* =========================================================
+   Web de Bryan Glot Fong — paleta del currículum
+   Menta · Neutros · Verde té · Naranja suave (+ Amanecer como highlight)
+   ========================================================= */
+:root {
+  --menta: #A9E3CF;
+  --menta-tenue: #DDF5EB;
+  --verde-te: #14594A;
+  --naranja: #F9AB72;
+  --naranja-claro: #FBC49C;
+  --amanecer: #F2C14E;
+
+  --tinta: #12302A;
+  --tinta-naranja: #2B1D15;
+  --muted: #4A675F;
+  --fondo: #EAF6F0;
+  --superficie: #FFFFFF;
+  --borde: #CFE3DA;
+
+  --radio: 16px;
+  --gutter: clamp(12px, 2.2vw, 32px);
+  --sombra: 0 6px 20px rgba(18, 48, 42, 0.08);
+  --f-titulos: 'Poppins', system-ui, sans-serif;
+  --f-texto: 'Nunito Sans', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--fondo);
+  color: var(--tinta);
+  font: 400 16px/1.6 var(--f-texto);
+}
+
+header,
+.secciones-contenedor,
+footer {
+  width: min(calc(100% - 2 * var(--gutter)), 1500px);
+  margin-inline: auto;
+}
+
+header { margin-top: 22px; }
+
+#imagen-de-fondo {
+  display: block;
+  width: 100%;
+  height: clamp(130px, 21vw, 250px);
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid var(--borde);
+  border-radius: 22px;
+  box-shadow: var(--sombra);
+}
+
+:focus-visible { outline: 3px solid var(--verde-te); outline-offset: 2px; }
+
+/* ---------- Rejilla ---------- */
+.secciones-contenedor {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.82fr) minmax(0, 2.8fr) minmax(190px, 0.9fr);
+  align-items: start;
+  gap: clamp(12px, 1.6vw, 24px);
+  margin-top: 22px;
+}
+
+section {
+  min-width: 0;
+  padding: clamp(15px, 1.8vw, 25px);
+  overflow-wrap: anywhere;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+section.izquierda,
+section.derecha {
+  position: sticky;
+  top: 84px; /* altura de la barra de navegación + aire */
+}
+
+/* La columna central no es una tarjeta: cada bloque lo es */
+section.centro {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 0;
+  background: none;
+  border: 0;
+  box-shadow: none;
+}
+
+/* ---------- Tipografía ---------- */
+h1, h2, h3, h4 {
+  margin: 0;
+  color: var(--verde-te);
+  font-family: var(--f-titulos);
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+h1 { margin-bottom: 16px; font-size: clamp(1.4rem, 2.2vw, 1.9rem); font-weight: 700; }
+h4 { margin-bottom: 10px; font-size: 0.95rem; font-weight: 700; }
+
+/* Barrita naranja bajo los títulos (misma marca que el currículum) */
+h1::after,
+.izquierda h4::after,
+.derecha h4::after {
+  content: "";
+  display: block;
+  width: 34px;
+  height: 3px;
+  margin-top: 6px;
+  background: var(--naranja);
+}
+
+#centro-capa1 article h4::after { display: none; }
+
+p { margin: 0 0 8px; color: var(--muted); }
+
+ul { margin: 0; padding: 0; list-style: none; }
+li { margin: 4px 0; padding: 5px 0; }
+li::marker { color: var(--verde-te); }
+
+a {
+  color: var(--verde-te);
+  text-decoration-color: var(--naranja);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Columnas laterales ---------- */
+.izquierda ul + h4,
+.derecha ul + h4 { margin-top: 22px; }
+
+.izquierda li,
+.derecha li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--borde);
+}
+
+.izquierda li:last-child,
+.derecha li:last-child { border-bottom: 0; }
+
+.izquierda a,
+.derecha a {
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.izquierda a:hover,
+.derecha a:hover { text-decoration: underline; text-decoration-color: var(--naranja); text-decoration-thickness: 2px; }
+
+/* ---------- Bloques centrales ---------- */
+#centro-topping,
+#centro-capa1,
+#centro-capa_madre,
+#centro-plato {
+  margin: 0;
+  padding: clamp(17px, 2.2vw, 29px);
+  scroll-margin-top: 100px;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+/* Intro y contacto en menta tenue: zonas de calma */
+#centro-topping,
+#centro-plato { background: var(--menta-tenue); }
+
+#centro-topping ul,
+#centro-capa_madre ul { padding-left: 20px; list-style: disc; }
+
+#centro-topping li { padding: 4px 0; color: var(--tinta); }
+
+/* Tres accesos */
+#centro-capa1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 14px;
+}
+
+#centro-capa1 h1 { flex: 1 0 100%; margin-bottom: 2px; }
+
+#centro-capa1 article {
+  flex: 1 1 170px;
+  min-width: 0;
+  padding: 16px 18px;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+}
+
+#centro-capa1 article p { margin: 0; }
+
+#centro-capa1 article a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 16px;
+  background: var(--menta-tenue);
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+#centro-capa1 article a:hover { background: var(--naranja); color: var(--tinta-naranja); }
+
+/* Sobre mí */
+#centro-capa_madre img {
+  display: block;
+  float: right;
+  width: min(32%, 200px);
+  aspect-ratio: 1;
+  margin: 0 0 12px 22px;
+  object-fit: cover;
+  border: 6px solid var(--menta);
+  border-radius: 50%;
+  shape-outside: circle(50%);
+}
+
+#centro-capa_madre::after { content: ""; display: block; clear: both; }
+
+/* ---------- Formulario ---------- */
+#centro-plato form {
+  display: flex;
+  width: min(100%, 620px);
+  flex-direction: column;
+  gap: 8px;
+}
+
+#centro-plato form p { margin: 0 0 4px; color: var(--tinta); }
+
+#centro-plato label { margin-top: 4px; color: var(--tinta); font-size: 0.94rem; font-weight: 700; }
+
+#centro-plato input[type="text"],
+#centro-plato input[type="email"],
+#centro-plato textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 13px;
+  color: var(--tinta);
+  font: inherit;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+}
+
+#centro-plato textarea { min-height: 130px; resize: vertical; }
+
+#centro-plato input:focus,
+#centro-plato textarea:focus { border-color: var(--verde-te); }
+
+.boton {
+  align-self: flex-start;
+  min-height: 44px;
+  margin-top: 8px;
+  padding: 0 24px;
+  color: var(--tinta-naranja);
+  font: 700 14px/1 var(--f-titulos);
+  background: var(--naranja);
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.boton:hover { background: var(--naranja-claro); }
+
+/* Mensaje de agradecimiento (lo escribe js/script.js) */
+.mensaje-exito {
+  margin-top: 16px;
+  padding: 14px 18px;
+  color: var(--tinta);
+  background: var(--superficie);
+  border-left: 4px solid var(--verde-te);
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.mensaje-exito[hidden] { display: none; }
+.mensaje-exito small { display: block; margin-top: 4px; color: var(--muted); font-weight: 400; }
+.mensaje-exito.es-error { border-left-color: #B3412B; }
+
+/* ---------- Pie ---------- */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-block: 24px;
+  padding: 16px;
+  background: var(--menta);
+  border-radius: var(--radio);
+}
+
+footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 16px;
+  color: var(--verde-te);
+  font: 700 14px/1 var(--f-titulos);
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 999px;
+  transition: background 0.15s;
+}
+
+footer a:hover { background: #fff; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1050px) {
+  .secciones-contenedor { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); }
+  section.centro { grid-column: 1 / -1; grid-row: 1; }
+  section.izquierda,
+  section.derecha { position: static; }
+}
+
+@media (max-width: 700px) {
+  body { font-size: 15px; }
+  #imagen-de-fondo { height: 125px; border-radius: 15px; }
+  .secciones-contenedor { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  section.centro { grid-column: auto; grid-row: auto; }
+  section { padding: 14px; }
+  section.centro { padding: 0; }
+  #centro-topping,
+  #centro-capa1,
+  #centro-capa_madre,
+  #centro-plato { padding: 15px; scroll-margin-top: 20px; }
+  #centro-capa1 article { flex-basis: 100%; }
+  #centro-capa_madre img { float: none; width: min(60%, 180px); margin: 0 auto 16px; shape-outside: none; }
+  footer { flex-direction: column; align-items: stretch; }
+  footer a { justify-content: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}

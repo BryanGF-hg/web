@@ -1,127 +1,324 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bryan Glot Fong – Web</title>
+
+  <meta name="theme-color" content="#F6F4EF">
+  <meta name="description" content="Web personal de Bryan Glot Fong: repositorios, proyectos, información y contacto.">
+
+  <title>Bryan Glot Fong — Web personal</title>
+
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&amp;family=Poppins:wght@600;700&amp;display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="estilos.css">
   <script src="nav-modular.js" defer></script>
 </head>
+
 <body>
   <site-nav></site-nav>
 
-  <header>
-    <img id="imagen-de-fondo" src="Footer.png" alt="Imagen de fondo">
+  <header class="cabecera">
+    <img
+      id="imagen-de-fondo"
+      src="media/Footer.png"
+      alt="Imagen decorativa de cabecera"
+    >
   </header>
 
-  <div class="secciones-contenedor">
-    <!-- Columna izquierda -->
-    <section class="izquierda">
-      <h4>Repositorios de DAM2:</h4>
+  <main class="secciones-contenedor">
+
+    <!-- COLUMNA IZQUIERDA -->
+    <section class="izquierda panel">
+      <div class="etiqueta-seccion"></div>
+
+      <h2>Repositorios de DAM2</h2>
       <ul>
-        <li><a href="https://github.com/BryanGF-hg/DAM-II">DAM2</a></li>
-        <li><a href="https://github.com/BryanGF-hg/Acceso-a-Datos-2DAM">Acceso a Datos 2DAM</a></li>
+        <li>
+          <a href="https://github.com/BryanGF-hg/DAM-II" target="_blank" rel="noopener noreferrer">
+            DAM2 <span>↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/BryanGF-hg/Acceso-a-Datos-2DAM" target="_blank" rel="noopener noreferrer">
+            Acceso a Datos 2DAM <span>↗</span>
+          </a>
+        </li>
       </ul>
 
-      <h4>Repositorios de DAM1:</h4>
+      <h2>Repositorios de DAM1</h2>
       <ul>
-        <li><a href="https://github.com/BryanGF-hg/Programacion2526-1DAM">Programación</a></li>
-        <li><a href="https://github.com/BryanGF-hg/Bases-de-Datos2526-1DAM">Bases de Datos</a></li>
-        <li><a href="https://github.com/BryanGF-hg/Proyecto-Intermodular-1DAM">Proyecto Intermodular</a></li>
-        <li><a href="https://github.com/BryanGF-hg/Lenguajes-de-Marcas-1DAM">Lenguajes de Marcas</a></li>
+        <li>
+          <a href="https://github.com/BryanGF-hg/Programacion2526-1DAM" target="_blank" rel="noopener noreferrer">
+            Programación <span>↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/BryanGF-hg/Bases-de-Datos2526-1DAM" target="_blank" rel="noopener noreferrer">
+            Bases de Datos <span>↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/BryanGF-hg/Proyecto-Intermodular-1DAM" target="_blank" rel="noopener noreferrer">
+            Proyecto Intermodular <span>↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/BryanGF-hg/Lenguajes-de-Marcas-1DAM" target="_blank" rel="noopener noreferrer">
+            Lenguajes de Marcas <span>↗</span>
+          </a>
+        </li>
       </ul>
 
-      <h4>Repos Secundarios:</h4>
+      <h2>Repositorios secundarios</h2>
       <ul>
-        <li><a href="https://github.com/BryanGF-hg/practica-git-individual">Práctica Git</a></li>
-        <li><a href="https://github.com/BryanGF-hg/Imagenes-Grem">Imagenes Grem</a></li>
+        <li>
+          <a href="https://github.com/BryanGF-hg/practica-git-individual" target="_blank" rel="noopener noreferrer">
+            Práctica Git <span>↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/BryanGF-hg/Imagenes-Grem" target="_blank" rel="noopener noreferrer">
+            Imágenes Grem <span>↗</span>
+          </a>
+        </li>
       </ul>
     </section>
 
-    <!-- Columna central -->
+    <!-- COLUMNA CENTRAL -->
     <section class="centro">
-      <div id="centro-topping">
-        <h1>Inicio</h1>
-        <ul>
-          <li>Este es el inicio de mi página web. Resumiendo los contenidos comprendidos en varias secciones, una donde están los Repositorios, una principal (¡esta misma!) y una "Importante".</li>
-          <li>Dentro de los Repositorios, encontramos 2 diferentes categorías: una activa y una secundaria. Ambas son importantes.</li>
-          <li>Dentro de Importante, tenemos los repositorios que se distinguen por sí mismos. También tenemos proyectos que son aplicaciones o cosas pequeñas/grandes que pueden tener alguna función.</li>
-          <li>Y la principal, donde se amplía la información de los repositorios o contenidos en sí.</li>
+
+      <div id="centro-topping" class="panel panel-destacado">
+        <div class="etiqueta-seccion"></div>
+
+        <h1>Inicio<span class="texto-naranja">.</span></h1>
+
+        <p class="texto-intro">
+          Este es mi espacio personal en la web. Aquí reúno mis repositorios,
+          proyectos, recursos y diferentes formas de conocer mi trabajo.
+        </p>
+
+        <ul class="lista-intro">
+          <li>
+            <span class="lista-indice">01</span>
+            <span>Repositorios académicos y personales organizados por curso y temática.</span>
+          </li>
+          <li>
+            <span class="lista-indice">02</span>
+            <span>Proyectos propios, aplicaciones y experimentos de desarrollo.</span>
+          </li>
+          <li>
+            <span class="lista-indice">03</span>
+            <span>Información personal, portafolio y vías de contacto.</span>
+          </li>
         </ul>
+
+        <div class="firma-bloque">
+          <span>BRYAN GLOT FONG</span>
+          <span>DESARROLLO DE APLICACIONES MULTIPLATAFORMA</span>
+        </div>
       </div>
 
-      <div id="centro-capa1">
-        <h1>Contenido principal</h1>
-        <article>
-          <h4>Portafolio</h4>
-          <p><a href="../portafolio/index.html">Ver portafolio</a></p>
-        </article>
-        <article>
-          <h4>Currículum</h4>
-          <p><a href="../curriculum/index.html">Ver currículum</a></p>
-        </article>
-        <article>
-          <h4>Sitio Web</h4>
-          <p><a href="index.html">Estás aquí</a></p>
-        </article>
+      <div id="centro-capa1" class="panel">
+        <div class="etiqueta-seccion"></div>
+        <h2>Contenido principal<span class="texto-naranja"></span></h2>
+
+        <div class="accesos-grid">
+          <article class="acceso-card">
+            <h3>Portafolio</h3>
+            <p>Una selección de proyectos, habilidades y trabajos realizados.</p>
+            <a href="../portafolio/index.html">Abrir portafolio <span>↗</span></a>
+          </article>
+
+          <article class="acceso-card">
+            <h3>Currículum</h3>
+            <p>Formación, experiencia, competencias y trayectoria académica.</p>
+            <a href="../curriculum/index.html">Ver currículum <span>↗</span></a>
+          </article>
+
+          <article class="acceso-card acceso-actual">
+            <h3>Sitio web</h3>
+            <p>La página en la que te encuentras actualmente.</p>
+            <a href="index.html" aria-current="page">Estás aquí <span>●</span></a>
+          </article>
+        </div>
       </div>
 
-      <div id="centro-capa_madre">
-        <h1>Sobre mí</h1>
-        <img src="ImagenFormaldeBryanGlotFong.jpg" alt="Foto de Bryan Glot Fong">
-        <ul>
-          <li>Soy Bryan Glot Fong, un estudiante que ahora mismo está cursando el segundo año de Técnico Superior de Desarrollo de Aplicaciones Multiplataforma en el centro de formación superior CEAC FP ubicado en Burjassot, Valencia.</li>
-        </ul>
+      <div id="centro-capa_madre" class="panel">
+        <div class="etiqueta-seccion"></div>
+        <h2>Sobre mí<span class="texto-naranja"></span></h2>
+
+        <div class="perfil-contenido">
+          <img
+            src="media/ImagenFormaldeBryanGlotFong.jpg"
+            alt="Fotografía de Bryan Glot Fong"
+            loading="lazy"
+          >
+
+          <div>
+            <h3>Bryan Glot Fong</h3>
+            <p class="perfil-rol">Estudiante de Desarrollo de Aplicaciones Multiplataforma</p>
+            <p>
+              Soy Bryan Glot Fong, estudiante de segundo año del ciclo formativo
+              de Técnico Superior en Desarrollo de Aplicaciones Multiplataforma
+              en CEAC FP, ubicado en Burjassot, Valencia.
+            </p>
+            <p>
+              En esta web recopilo mis trabajos, repositorios y proyectos
+              desarrollados durante mi formación.
+            </p>
+          </div>
+        </div>
       </div>
 
-      <div id="centro-plato">
-        <h1>Contacto</h1>
+      <div id="centro-plato" class="panel panel-contacto">
+        <div class="etiqueta-seccion"></div>
+        <h2>Contacto<span class="texto-naranja">.</span></h2>
+
+        <p class="contacto-descripcion">
+          ¿Tienes alguna pregunta, propuesta o quieres conocer más sobre alguno
+          de mis proyectos? Puedes escribirme mediante este formulario.
+        </p>
+
         <form id="form-contacto">
-          <p><b>Formulario (¡Pregúntame para más información!)</b></p>
-          <label for="nombre">Introduce tu nombre:</label>
-          <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+          <label for="nombre">Nombre</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Tu nombre"
+            autocomplete="name"
+            required
+          >
 
-          <label for="email">Introduce tu email:</label>
-          <input type="email" id="email" name="email" autocomplete="email" required>
+          <label for="email">Correo electrónico</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="nombre@ejemplo.com"
+            autocomplete="email"
+            required
+          >
 
-          <label for="mensaje">Introduce tu mensaje:</label>
-          <textarea id="mensaje" name="mensaje" required></textarea>
+          <label for="mensaje">Mensaje</label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            placeholder="Escribe aquí tu mensaje..."
+            rows="5"
+            required
+          ></textarea>
 
-          <button type="submit" class="boton">Enviar mensaje</button>
+          <button type="submit" class="boton">
+            Enviar mensaje <span>↗</span>
+          </button>
         </form>
-        <!-- El JS escribe aquí el mensaje de agradecimiento -->
-        <div id="mensaje-exito" class="mensaje-exito" role="status" aria-live="polite" hidden></div>
+
+        <div
+          id="mensaje-exito"
+          class="mensaje-exito"
+          role="status"
+          aria-live="polite"
+          hidden
+        ></div>
       </div>
     </section>
 
-    <!-- Columna derecha -->
-    <section class="derecha">
-      <h4>Proyectos:</h4>
-      <ul>
-        <li><a href="https://github.com/BryanGF-hg/AutoCYP">AutoCYP - Formateo Simple de Estructuras</a></li>
-        <li><a href="https://github.com/BryanGF-hg/WePlan">WePlan - Conexión Social de Grupos Locales</a></li>
-        <li><a href="https://github.com/BryanGF-hg/Proyecto-FloMViDex">FloMViDex - MP4 Maidcore Player</a></li>
-        <li><a href="https://github.com/BryanGF-hg/comanya">Comanya - CRM de Competidores</a></li>
-        <li><a href="https://github.com/samonzfu/Transcriptor-Audios-WhatsApp">WAT - Transcriptor de Audios de WhatsApp</a></li>
-        <li><a href="https://github.com/BryanGF-hg/phosfytte-copilot">Phosfytte - Transcriptor de Youtube+Resumen</a></li>
-      </ul>
-    </section>
-  </div>
+    <!-- COLUMNA DERECHA -->
+    <section class="derecha panel">
+      <div class="etiqueta-seccion"></div>
+      <h2>Proyectos<span class="texto-naranja"></span></h2>
 
-  <footer>
-    <a href="tel:+34677865724" id="footer-contacto">Contacto: 677865724</a>
-    <a href="https://www.google.com/maps/search/?api=1&amp;query=46025+Valencia" id="footer-ubicacion">Ubicación: 46025 Valencia</a>
-    <a href="mailto:bryanglot@gmail.com" id="mostrar-correo">Correo</a>
-    <a href="mailto:bryan.alexander.glot.fong@alu.ceacfp.es" id="mostrar-correo_administrativo">Correo Administrativo</a>
-    <a href="https://github.com/BryanGF-hg">GitHub</a>
-    <a href="https://www.linkedin.com/in/bryan-glot-fong-04082a39a/">LinkedIn</a>
+      <ul class="lista-proyectos">
+        <li>
+          <a href="https://github.com/BryanGF-hg/AutoCYP" target="_blank" rel="noopener noreferrer">
+            <strong>AutoCYP</strong>
+            <small>Formateo simple de estructuras</small>
+            <span>↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/BryanGF-hg/WePlan" target="_blank" rel="noopener noreferrer">
+            <strong>WePlan</strong>
+            <small>Conexión social de grupos locales</small>
+            <span>↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/BryanGF-hg/Proyecto-FloMViDex" target="_blank" rel="noopener noreferrer">
+            <strong>FloMViDex</strong>
+            <small>MP4 Maidcore Player</small>
+            <span>↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/BryanGF-hg/comanya" target="_blank" rel="noopener noreferrer">
+            <strong>Comanya</strong>
+            <small>CRM de competidores</small>
+            <span>↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/samonzfu/Transcriptor-Audios-WhatsApp" target="_blank" rel="noopener noreferrer">
+            <strong>WAT</strong>
+            <small>Transcriptor de audios de WhatsApp</small>
+            <span>↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/BryanGF-hg/phosfytte-copilot" target="_blank" rel="noopener noreferrer">
+            <strong>Phosfytte</strong>
+            <small>Transcripción y resumen de YouTube</small>
+            <span>↗</span>
+          </a>
+        </li>
+      </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="pie-superior">
+      <span>BRYAN GLOT FONG</span>
+    </div>
+
+    <nav class="pie-enlaces" aria-label="Enlaces de contacto">
+
+      <div class="pie-enlace-grupo">
+        <a href="tel:+34677865724">Teléfono</a>
+        <button type="button" class="boton-copiar" data-copy="+34677865724">📋</button>
+      </div>
+
+      <div class="pie-enlace-grupo">
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=46025+Valencia"
+           target="_blank" rel="noopener noreferrer">Valencia</a>
+        <button type="button" class="boton-copiar" data-copy="46025 Valencia">📋</button>
+      </div>
+
+      <div class="pie-enlace-grupo">
+        <a href="mailto:bryanglot@gmail.com">Correo personal</a>
+        <button type="button" class="boton-copiar" data-copy="bryanglot@gmail.com">📋</button>
+      </div>
+
+      <div class="pie-enlace-grupo">
+        <a href="mailto:bryan.alexander.glot.fong@alu.ceacfp.es">Correo académico</a>
+        <button type="button" class="boton-copiar" data-copy="bryan.alexander.glot.fong@alu.ceacfp.es">📋</button>
+      </div>
+
+      <a href="https://github.com/BryanGF-hg"
+         target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+
+      <a href="https://www.linkedin.com/in/bryan-glot-fong-04082a39a/"
+         target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+
+    </nav>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
