@@ -81,12 +81,13 @@ html[data-theme=dark] .etiqueta-seccion{color:var(--menta)}
 .lista-proyectos strong{display:block;font-size:11px}
 .lista-proyectos small{display:block;margin-top:3px;color:var(--muted);font-size:9px;line-height:1.5}
 .lista-proyectos a:hover{padding-left:5px;color:var(--verde-te)}
-.pie{margin-block:34px 22px;padding:20px;color:var(--papel);background:var(--tinta);border:2px solid var(--tinta);box-shadow:var(--sombra)}
-.pie-superior{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding-bottom:15px;border-bottom:1px solid rgba(255,255,255,.25);font-size:10px;font-weight:700;letter-spacing:.07em}
-.pie-enlaces{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
-.pie-enlaces a{display:inline-flex;align-items:center;min-height:35px;padding:0 11px;color:var(--papel);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.35);font-size:10px;text-decoration:none;transition:color .15s,background .15s}
-.pie-enlaces a:hover{color:var(--tinta);background:var(--naranja);border-color:var(--naranja)}
-.pie-final{margin:20px 0 0;color:var(--menta);font-size:9px;letter-spacing:.08em}
+.pie,.pie-superior{color:var(--pie-fg)!important}
+.pie{--pie-bg:#1E2420;--pie-fg:#F6F4EF;--pie-muted:rgba(255, 255, 255, 0.6);--pie-borde:rgba(255, 255, 255, 0.22);--pie-hover-bg:var(--naranja);--pie-hover-fg:#2A2E2B;background:var(--pie-bg)!important;border-color:var(--pie-bg)!important;box-shadow:var(--sombra)}
+.pie-superior{border-bottom-color:var(--pie-borde)!important}
+.pie-enlace-grupo .boton-copiar,.pie-enlace-grupo a,.pie-enlaces .boton-copiar,.pie-enlaces a{color:var(--pie-fg)!important;background:rgba(255,255,255,.08)!important;border-color:var(--pie-borde)!important}
+.pie-enlace-grupo .boton-copiar:hover,.pie-enlace-grupo a:hover,.pie-enlaces .boton-copiar:hover,.pie-enlaces a:hover{color:var(--pie-hover-fg)!important;background:var(--pie-hover-bg)!important;border-color:var(--pie-hover-bg)!important}
+.pie-final{color:var(--menta)!important}
+html[data-theme=dark] .pie{--pie-bg:#0F1310;--pie-borde:rgba(255, 255, 255, 0.14)}
 .js-reveal{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s cubic-bezier(.2,.7,.2,1)}
 .js-reveal.is-visible{opacity:1;transform:translateY(0)}
 @media (max-width:1100px){.secciones-contenedor{grid-template-columns:minmax(0,1fr) minmax(0,2fr)}
