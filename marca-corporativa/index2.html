@@ -1,0 +1,1845 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Manual de marca</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="theme-color" content="#e8f3ee">
+<meta name="description" content="Manual de marca personal de Bryan Glot Fong. Color, tipografía, logotipo, iconos, componentes y voz.">
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('bgf-theme');
+        if (saved === 'dark' || saved === 'light') {
+          document.documentElement.dataset.theme = saved;
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;800&family=Victor+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+<style>
+    /* ============================================================
+       TOKENS · Paleta Bryan Glot Fong
+       45% Menta · 25% Neutros · 20% Verde té · 10% Naranja/Amanecer
+       Tipografía: Nunito Light (títulos) + Victor Mono (cuerpo y mono)
+       ============================================================ */
+    :root {
+      --menta: #A8E6CF;
+      --menta-soft: #d5ede4;
+      --verde-te: #3E7C6B;
+      --verde-te-hover: #2f6254;
+      --verde-te-soft: #e0f0e8;
+      --naranja: #FF8A3D;
+      --naranja-hover: #e67528;
+      --naranja-soft: #fff0e5;
+      --amanecer: #F2C14E;
+      --amanecer-soft: #fdf5e3;
+
+      --neutro-50: #f4faf7;
+      --neutro-100: #e8f3ee;
+      --neutro-200: #dbe7e3;
+      --neutro-300: #c5d6d0;
+      --neutro-500: #5a6b64;
+      --neutro-700: #2a3d36;
+      --neutro-900: #1a3a32;
+
+      --color-bg: var(--neutro-100);
+      --color-surface: #ffffff;
+      --color-surface-alt: var(--neutro-50);
+      --color-surface-hover: #eaf5f1;
+      --color-surface-menta: var(--menta-soft);
+
+      --color-text: #1f2a26;
+      --color-text-muted: var(--neutro-500);
+      --color-text-subtle: #8a9b94;
+      --color-heading: var(--verde-te);
+
+      --color-border: var(--neutro-200);
+      --color-border-strong: var(--neutro-300);
+
+      --color-structure: var(--verde-te);
+      --color-structure-hover: var(--verde-te-hover);
+      --color-structure-soft: var(--verde-te-soft);
+
+      --color-accent: var(--naranja);
+      --color-accent-hover: var(--naranja-hover);
+      --color-accent-soft: var(--naranja-soft);
+
+      --color-accent-2: var(--amanecer);
+      --color-accent-2-soft: var(--amanecer-soft);
+
+      --color-success: var(--verde-te);
+      --color-success-soft: var(--verde-te-soft);
+      --color-danger: #d9534f;
+      --color-danger-soft: #fbeaea;
+
+      --color-on-accent: #ffffff;
+      --color-focus-ring: rgba(255, 138, 61, .55);
+
+      /* === Tipografía === */
+      --font-titulo: 'Nunito', system-ui, -apple-system, sans-serif;
+      --font-cuerpo: 'Victor Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+      --font-mono: 'Victor Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+      /* === Escala === */
+      --text-display: 52px;
+      --text-h1: 38px;
+      --text-figure-lg: 32px;
+      --text-figure: 26px;
+      --text-h2: 22px;
+      --text-h3: 17px;
+      --text-body: 14.5px;
+      --text-small: 13px;
+      --text-caption: 12px;
+
+      /* === Pesos === */
+      --weight-light: 300;
+      --weight-regular: 400;
+      --weight-medium: 500;
+      --weight-semibold: 600;
+      --weight-bold: 700;
+
+      --leading-tight: 1.15;
+      --leading-body: 1.65;
+
+      /* === Espacio === */
+      --space-1: 2px;  --space-2: 4px;  --space-3: 6px;
+      --space-4: 8px;  --space-5: 10px; --space-6: 12px;
+      --space-7: 15px; --space-8: 18px; --space-9: 22px;
+      --space-10: 34px;
+      --space-layout: clamp(18px, 1.8vw, 34px);
+
+      /* === Radios === */
+      --radius-card: 16px;
+      --radius-tile: 12px;
+      --radius-control: 10px;
+      --radius-icon: 10px;
+      --radius-tag: 6px;
+      --radius-pill: 999px;
+
+      /* === Sombras === */
+      --shadow-card: 0 10px 30px rgba(41, 30, 50, .05);
+      --shadow-hover: 0 4px 20px rgba(62, 124, 107, .08);
+      --shadow-menu: 0 20px 60px rgba(26, 58, 50, .12);
+      --shadow-modal: 0 30px 100px rgba(26, 58, 50, .18);
+
+      --ease-ui: cubic-bezier(.23, 1, .32, 1);
+      --duration-fast: .15s;
+      --duration-base: .2s;
+      --duration-slow: .3s;
+
+      color-scheme: light;
+      font-family: var(--font-cuerpo);
+    }
+
+    :root[data-theme="dark"] {
+      --color-bg: #0f1a16;
+      --color-surface: #172620;
+      --color-surface-alt: #1e3029;
+      --color-surface-hover: #243a32;
+      --color-surface-menta: #1a2e27;
+
+      --color-text: #e0f0e8;
+      --color-text-muted: #8fb5a5;
+      --color-text-subtle: #6b8778;
+      --color-heading: #6ab598;
+
+      --color-border: #243a32;
+      --color-border-strong: #2f4a41;
+
+      --color-structure: #6ab598;
+      --color-structure-hover: #8fc9b0;
+      --color-structure-soft: #1a2e27;
+
+      --color-accent-soft: #2e1f12;
+      --color-accent-2-soft: #2e2814;
+
+      --color-success-soft: #1a2e27;
+      --color-danger-soft: #2e1a1a;
+
+      color-scheme: dark;
+    }
+
+    /* ============================================================
+       RESET
+       ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--color-bg);
+      color: var(--color-text);
+      min-height: 100vh;
+      font-family: var(--font-cuerpo);
+      font-size: var(--text-body);
+      line-height: var(--leading-body);
+      -webkit-font-smoothing: antialiased;
+      transition: background var(--duration-slow), color var(--duration-slow);
+    }
+    button, input, select, textarea { font: inherit; }
+    button { cursor: pointer; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3, h4, p { margin: 0; }
+    h1, h2, h3, h4 {
+      font-family: var(--font-titulo);
+      font-weight: var(--weight-light);
+      color: var(--color-heading);
+      line-height: var(--leading-tight);
+    }
+    svg { display: block; }
+    :focus-visible { outline: 3px solid var(--color-focus-ring); outline-offset: 3px; }
+
+    /* ============================================================
+       DOC LAYOUT
+       ============================================================ */
+    .doc {
+      display: grid;
+      grid-template-columns: 236px minmax(0, 1fr);
+      min-height: 100vh;
+    }
+    .doc-nav {
+      position: sticky;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      height: 100vh;
+      padding: 28px 18px 24px 24px;
+      overflow-y: auto;
+      border-right: 1px solid var(--color-border);
+      background: var(--color-surface);
+    }
+    .doc-nav .logo {
+      display: block;
+      width: 46px;
+      height: auto;
+      color: var(--naranja);
+    }
+    .doc-nav ol {
+      display: grid;
+      gap: 2px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: nav;
+    }
+    .doc-nav li { counter-increment: nav; }
+    .doc-nav a {
+      display: flex;
+      gap: 10px;
+      padding: 6px 10px;
+      border-radius: 8px;
+      color: var(--color-text-muted);
+      font-family: var(--font-cuerpo);
+      font-size: 13px;
+      transition: background var(--duration-base), color var(--duration-base);
+    }
+    .doc-nav ol a::before {
+      content: counter(nav, decimal-leading-zero);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      line-height: 20px;
+      color: var(--color-text-subtle);
+    }
+    .doc-nav a:hover, .doc-nav a.is-current {
+      background: var(--verde-te-soft);
+      color: var(--color-structure);
+      font-weight: var(--weight-bold);
+    }
+    .doc-nav a.is-current::before { color: var(--color-structure); }
+    .doc-nav-foot {
+      display: grid;
+      gap: 8px;
+      margin-top: auto;
+      color: var(--color-text-muted);
+      font-size: 11px;
+    }
+    .doc-main {
+      min-width: 0;
+      padding: 0 clamp(20px, 5vw, 72px) 96px;
+      background: linear-gradient(180deg, var(--neutro-100) 0%, var(--color-bg) 320px);
+    }
+    :root[data-theme="dark"] .doc-main {
+      background: linear-gradient(180deg, #0f1a16 0%, var(--color-bg) 320px);
+    }
+    .doc-section {
+      max-width: 1080px;
+      padding: 72px 0 8px;
+      scroll-margin-top: 8px;
+      position: relative;
+    }
+    .doc-section + .doc-section { border-top: 1px solid var(--color-border); }
+    .doc-kicker {
+      margin-bottom: 10px;
+      color: var(--color-structure);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: var(--weight-bold);
+    }
+    .doc-section > h2 {
+      margin-bottom: 14px;
+      font-size: var(--text-h1);
+      letter-spacing: -.5px;
+    }
+    .doc-section h3 {
+      margin: 40px 0 14px;
+      font-size: var(--text-h2);
+      color: var(--color-heading);
+    }
+    .doc-section h3:first-child { margin-top: 0; }
+    .lead {
+      max-width: 64ch;
+      color: var(--color-text-muted);
+      font-size: 14.5px;
+      line-height: 1.65;
+    }
+    .doc-section p { max-width: 70ch; }
+    .doc-section ul.rules {
+      display: grid;
+      gap: 8px;
+      max-width: 70ch;
+      margin: 14px 0 0;
+      padding-left: 18px;
+    }
+    .doc-section ul.rules li { line-height: 1.65; }
+    .doc-section ul.rules li::marker { color: var(--color-structure); }
+
+    /* ============================================================
+       SECTION TOOLBAR (export button per section)
+       ============================================================ */
+    .section-toolbar {
+      position: absolute;
+      top: 72px;
+      right: 0;
+      display: flex;
+      gap: 6px;
+    }
+    .btn-export {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 10px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: var(--weight-bold);
+      color: var(--color-text-subtle);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-tag);
+      cursor: pointer;
+      transition: all var(--duration-base);
+      white-space: nowrap;
+    }
+    .btn-export:hover {
+      color: var(--color-structure);
+      border-color: var(--color-structure);
+      background: var(--verde-te-soft);
+    }
+    .btn-export.copied {
+      color: var(--color-on-accent);
+      background: var(--color-structure);
+      border-color: var(--color-structure);
+    }
+    .btn-export svg { width: 12px; height: 12px; flex: none; }
+
+    /* ============================================================
+       PORTADA
+       ============================================================ */
+    .cover {
+      display: grid;
+      align-content: center;
+      gap: 26px;
+      min-height: min(720px, 92vh);
+      padding: 60px;
+      border-radius: var(--radius-card);
+      margin-top: 40px;
+      background: linear-gradient(135deg, var(--menta) 0%, #e0f7ee 100%);
+      border: 1px solid var(--color-border);
+      position: relative;
+      overflow: hidden;
+    }
+    :root[data-theme="dark"] .cover {
+      background: linear-gradient(135deg, #1a3a32 0%, #172620 100%);
+      border-color: var(--color-border);
+    }
+    .cover .logo {
+      width: min(360px, 82%);
+      height: auto;
+      color: var(--color-text);
+    }
+    .cover h1 {
+      max-width: 18ch;
+      font-size: clamp(38px, 5.5vw, 62px);
+      line-height: 1.05;
+      letter-spacing: -.02em;
+      font-weight: var(--weight-light);
+      color: var(--color-structure);
+    }
+    :root[data-theme="dark"] .cover h1 { color: #a8e6cf; }
+    .cover .lead {
+      max-width: 56ch;
+      color: var(--color-text);
+      font-size: 15px;
+      font-family: var(--font-cuerpo);
+    }
+    :root[data-theme="dark"] .cover .lead { color: #c8e5d8; }
+    .cover-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      color: var(--color-structure);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: var(--weight-bold);
+    }
+    :root[data-theme="dark"] .cover-meta { color: #8fc9b0; }
+    .cover-eyebrow {
+      color: var(--naranja);
+      font-family: var(--font-titulo);
+      font-weight: var(--weight-light);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    /* ============================================================
+       GRIDS
+       ============================================================ */
+    .grid { display: grid; gap: 16px; }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+    /* ============================================================
+       PANELS
+       ============================================================ */
+    .panel {
+      padding: 22px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+      background: var(--color-surface);
+      box-shadow: var(--shadow-card);
+    }
+    .panel h4 {
+      margin-bottom: 6px;
+      font-size: var(--text-h3);
+      font-weight: var(--weight-light);
+      color: var(--color-structure);
+    }
+    .panel p {
+      color: var(--color-text-muted);
+      font-size: var(--text-small);
+      line-height: 1.6;
+    }
+    .panel.menta {
+      background: var(--color-surface-menta);
+      border-color: var(--menta);
+    }
+    .panel.menta h4 { color: var(--verde-te); }
+    .panel.menta p { color: var(--verde-te); opacity: .85; }
+    .caption {
+      margin-top: 10px;
+      color: var(--color-text-muted);
+      font-size: var(--text-caption);
+    }
+    .mono { font-family: var(--font-mono); }
+
+    /* ============================================================
+       BOTONES
+       ============================================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 1px solid var(--color-border-strong);
+      background: var(--color-surface);
+      color: var(--color-text);
+      border-radius: var(--radius-control);
+      padding: 10px 14px;
+      font-family: var(--font-cuerpo);
+      font-size: var(--text-small);
+      font-weight: var(--weight-medium);
+      white-space: nowrap;
+      transition: background var(--duration-base), border-color var(--duration-base), transform var(--duration-base);
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: var(--color-surface-hover);
+      border-color: var(--color-border-strong);
+    }
+    .btn.primary {
+      background: var(--color-accent);
+      color: var(--color-on-accent);
+      border-color: var(--color-accent);
+      font-weight: var(--weight-bold);
+    }
+    .btn.primary:hover {
+      background: var(--color-accent-hover);
+      border-color: var(--color-accent-hover);
+    }
+    .btn.secondary {
+      background: transparent;
+      color: var(--color-structure);
+      border-color: var(--color-structure);
+      font-weight: var(--weight-bold);
+    }
+    .btn.secondary:hover { background: var(--verde-te-soft); }
+    .btn.small { padding: 7px 10px; font-size: var(--text-caption); border-radius: var(--radius-icon); }
+
+    /* ============================================================
+       TAGS
+       ============================================================ */
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      border-radius: var(--radius-tag);
+      padding: 4px 9px;
+      font-size: var(--text-caption);
+      font-weight: var(--weight-bold);
+      background: var(--color-surface-hover);
+      color: var(--color-text-muted);
+    }
+    .tag.accent { background: var(--naranja-soft); color: var(--naranja); }
+    .tag.menta { background: var(--menta-soft); color: var(--verde-te); }
+    .tag.green { background: var(--verde-te-soft); color: var(--verde-te); }
+    .tag.amanecer { background: var(--amanecer-soft); color: #b8892e; }
+
+    /* ============================================================
+       ICONOS
+       ============================================================ */
+    .icon { width: 17px; height: 17px; flex: none; }
+    .icon.xs { width: 13px; height: 13px; }
+    .icon.sm { width: 15px; height: 15px; }
+
+    /* ============================================================
+       SWATCHES
+       ============================================================ */
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+    }
+    .swatch {
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-tile);
+      background: var(--color-surface);
+    }
+    .swatch-chip { height: 100px; display: flex; }
+    .swatch-chip span { flex: 1; }
+    .swatch-body { display: grid; gap: 2px; padding: 14px 16px 16px; }
+    .swatch-body strong {
+      font-family: var(--font-titulo);
+      font-weight: var(--weight-light);
+      font-size: 16px;
+      color: var(--color-structure);
+    }
+    .swatch-token {
+      color: var(--color-text-muted);
+      font-family: var(--font-mono);
+      font-size: 11px;
+    }
+    .swatch-codes {
+      display: grid;
+      gap: 2px;
+      margin-top: 8px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+    }
+    .swatch-codes div { display: flex; justify-content: space-between; gap: 8px; }
+    .swatch-codes div span { color: var(--color-text-muted); }
+
+    /* ============================================================
+       TIPOGRAFÍA
+       ============================================================ */
+    .specimen { display: grid; gap: 8px; }
+    .specimen .big {
+      font-family: var(--font-titulo);
+      font-size: clamp(56px, 9vw, 104px);
+      line-height: 1;
+      letter-spacing: -.03em;
+      font-weight: var(--weight-light);
+      color: var(--color-structure);
+    }
+    .specimen .big.victor {
+      font-family: var(--font-cuerpo);
+      font-size: clamp(48px, 8vw, 88px);
+      font-weight: 700;
+      font-style: italic;
+      letter-spacing: -.02em;
+    }
+    .weights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 24px;
+      font-size: 20px;
+      color: var(--color-structure);
+    }
+    .type-scale { width: 100%; border-collapse: collapse; }
+    .type-scale td {
+      padding: 14px 12px 14px 0;
+      border-bottom: 1px solid var(--color-border);
+      vertical-align: baseline;
+      color: var(--color-text);
+    }
+    .type-scale td:first-child { width: 46%; }
+    .type-scale .mono { color: var(--color-text-muted); font-size: 11px; white-space: nowrap; }
+
+    /* ============================================================
+       PROPORCIÓN (45/25/20/10)
+       ============================================================ */
+    .proportion {
+      display: flex;
+      overflow: hidden;
+      height: 68px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-tile);
+      font-family: var(--font-titulo);
+      font-weight: var(--weight-light);
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+    .proportion span {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      padding: 8px 10px;
+      text-align: center;
+    }
+    .proportion span b { font-size: 16px; font-weight: var(--weight-light); }
+    .proportion span small { font-size: 11px; opacity: .85; font-weight: var(--weight-regular); font-family: var(--font-cuerpo); }
+    .proportion .p-menta { background: var(--menta); color: var(--verde-te); }
+    .proportion .p-neutro { background: var(--neutro-200); color: var(--neutro-700); }
+    .proportion .p-verde { background: var(--verde-te); color: white; }
+    .proportion .p-naranja { background: var(--naranja); color: white; }
+
+    /* ============================================================
+       DEMO
+       ============================================================ */
+    .demo {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      padding: 26px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+      background: var(--color-surface-alt);
+      margin-bottom: 8px;
+    }
+    .demo + .caption { margin-bottom: 24px; }
+
+    /* ============================================================
+       DO / DON'T PANELS (MEJORA 4)
+       ============================================================ */
+    .dodont-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+    .dodont {
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+    }
+    .dodont-header {
+      padding: 10px 16px;
+      font-family: var(--font-titulo);
+      font-weight: var(--weight-light);
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .dodont-header svg { width: 16px; height: 16px; flex: none; }
+    .dodont.do .dodont-header {
+      background: var(--verde-te-soft);
+      color: var(--verde-te);
+      border-bottom: 1px solid var(--verde-te);
+    }
+    .dodont.dont .dodont-header {
+      background: var(--color-danger-soft);
+      color: var(--color-danger);
+      border-bottom: 1px solid var(--color-danger);
+    }
+    .dodont-body {
+      padding: 20px;
+      background: var(--color-surface);
+    }
+    .dodont-body p {
+      font-size: 12px;
+      color: var(--color-text-muted);
+      margin-top: 10px;
+    }
+
+    /* ============================================================
+       ICON GRID
+       ============================================================ */
+    .icon-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
+      gap: 8px;
+    }
+    .icon-cell {
+      display: grid;
+      justify-items: center;
+      gap: 10px;
+      padding: 18px 8px 12px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-tile);
+      background: var(--color-surface);
+      color: var(--color-structure);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      transition: border-color var(--duration-base);
+      cursor: pointer;
+    }
+    .icon-cell:hover { border-color: var(--color-structure); }
+    .icon-cell .icon { width: 24px; height: 24px; }
+    .icon-cell span { color: var(--color-text-muted); }
+    .icon-cell.copied {
+      border-color: var(--color-structure);
+      background: var(--verde-te-soft);
+    }
+    .icon-cell.copied span { color: var(--color-structure); }
+
+    /* ============================================================
+       VOICE ITEMS
+       ============================================================ */
+    .voice-item {
+      padding: 15px 18px;
+      border-radius: var(--radius-tile);
+      font-size: var(--text-small);
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+    .voice-item.si {
+      background: var(--verde-te-soft);
+      border-left: 4px solid var(--verde-te);
+      color: var(--verde-te);
+    }
+    .voice-item.no {
+      background: var(--color-danger-soft);
+      border-left: 4px solid var(--color-danger);
+      color: #7a2a27;
+    }
+    :root[data-theme="dark"] .voice-item.no { color: #e8a5a3; }
+    .voice-item strong {
+      font-family: var(--font-titulo);
+      font-weight: var(--weight-light);
+      font-size: 15px;
+    }
+
+    /* ============================================================
+       TABLAS
+       ============================================================ */
+    .data-table { width: 100%; border-collapse: collapse; font-size: var(--text-small); }
+    .data-table th {
+      text-align: left;
+      padding: 10px 12px;
+      background: var(--color-structure-soft);
+      color: var(--color-structure);
+      font-family: var(--font-titulo);
+      font-weight: var(--weight-light);
+      font-size: 14px;
+    }
+    .data-table th:first-child { border-radius: 6px 0 0 6px; }
+    .data-table th:last-child { border-radius: 0 6px 6px 0; }
+    .data-table td { padding: 12px; border-bottom: 1px solid var(--color-border); }
+
+    /* ============================================================
+       LOGO DOWNLOAD BUTTONS (MEJORA 1)
+       ============================================================ */
+    .logo-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .btn-logo-dl {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      font-family: var(--font-cuerpo);
+      font-size: 12px;
+      font-weight: var(--weight-bold);
+      color: var(--color-structure);
+      background: var(--verde-te-soft);
+      border: 1px solid var(--color-structure);
+      border-radius: var(--radius-control);
+      cursor: pointer;
+      transition: all var(--duration-base);
+    }
+    .btn-logo-dl:hover {
+      background: var(--color-structure);
+      color: var(--color-on-accent);
+    }
+    .btn-logo-dl.copied {
+      background: var(--naranja);
+      border-color: var(--naranja);
+      color: #fff;
+    }
+    .btn-logo-dl svg { width: 14px; height: 14px; }
+
+    /* ============================================================
+       TOKEN EXPORT (MEJORA 2)
+       ============================================================ */
+    .token-export-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+      padding: 16px 20px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+    }
+    .token-export-bar .label {
+      font-family: var(--font-titulo);
+      font-weight: var(--weight-light);
+      font-size: 14px;
+      color: var(--color-heading);
+      display: flex;
+      align-items: center;
+      margin-right: auto;
+    }
+
+    /* ============================================================
+       MOCKUPS (MEJORA 5 — mobile)
+       ============================================================ */
+    .app-mockups { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+    .app-card {
+      border-radius: var(--radius-tile);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      min-height: 220px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+    }
+    .app-browser-top {
+      background: var(--neutro-200);
+      padding: 10px 12px;
+      display: flex;
+      gap: 6px;
+    }
+    :root[data-theme="dark"] .app-browser-top { background: var(--color-border-strong); }
+    .app-browser-top i {
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      background: var(--neutro-300);
+    }
+    :root[data-theme="dark"] .app-browser-top i { background: var(--color-text-subtle); }
+    .app-browser-body {
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-between;
+    }
+    .app-browser-body small {
+      font-size: 11px;
+      color: var(--color-text-subtle);
+      font-weight: var(--weight-light);
+      letter-spacing: 1.5px;
+      font-family: var(--font-titulo);
+    }
+    .app-browser-body h3 {
+      font-size: 30px;
+      color: var(--color-heading);
+      margin-top: 8px;
+      font-weight: var(--weight-light);
+    }
+    .app-browser-body .link {
+      color: var(--naranja);
+      font-weight: var(--weight-bold);
+      font-size: 13px;
+      margin-top: 16px;
+    }
+    .app-stationery {
+      background: var(--naranja);
+      padding: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+    .app-paper {
+      background: white;
+      width: 100%;
+      height: 100%;
+      padding: 22px;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: -4px 4px 14px rgba(0, 0, 0, .1);
+    }
+    .app-paper strong {
+      font-family: var(--font-titulo);
+      font-weight: var(--weight-light);
+      color: var(--verde-te);
+      font-size: 18px;
+    }
+    .app-paper .line { height: 2px; background: #eee; margin: 12px 0; }
+    .app-paper .line.short { width: 60%; }
+    .app-paper small {
+      margin-top: auto;
+      font-size: 10px;
+      color: var(--color-text-subtle);
+      font-family: var(--font-mono);
+    }
+    .app-social {
+      background: var(--verde-te);
+      color: white;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 32px 20px;
+    }
+    .app-social .dot {
+      width: 10px; height: 10px;
+      background: var(--amanecer);
+      border-radius: 50%;
+      margin: 0 auto 12px;
+    }
+    .app-social h3 {
+      font-size: 40px;
+      color: white;
+      line-height: 1;
+      margin: 12px 0;
+      font-weight: var(--weight-light);
+    }
+    .app-social .linea {
+      width: 40px; height: 4px;
+      background: var(--menta);
+      margin: 0 auto;
+    }
+
+    /* ============================================================
+       RESPONSIVE (MEJORA 5 — refuerzo móvil)
+       ============================================================ */
+    @media (max-width: 940px) {
+      .doc { grid-template-columns: 1fr; }
+      .doc-nav {
+        position: sticky;
+        z-index: 5;
+        flex-direction: row;
+        align-items: center;
+        height: auto;
+        padding: 12px 16px;
+        overflow-x: auto;
+        border-right: 0;
+        border-bottom: 1px solid var(--color-border);
+      }
+      .doc-nav ol { display: flex; }
+      .doc-nav a { white-space: nowrap; }
+      .doc-nav a::before { display: none; }
+      .doc-nav-foot { flex-direction: row; margin: 0; }
+      .doc-nav-foot span { display: none; }
+      .grid-3, .grid-4, .app-mockups { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .cover { padding: 40px; margin-top: 20px; }
+      .section-toolbar { position: static; margin-bottom: 12px; }
+      .dodont-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 620px) {
+      .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      .app-mockups { grid-template-columns: 1fr; }
+      .app-card { min-height: 200px; }
+      .app-browser-body h3 { font-size: 24px; }
+      .app-social h3 { font-size: 32px; }
+      .app-browser-body { padding: 20px; }
+      .doc-section { padding-top: 52px; }
+      .type-scale tr { display: grid; padding: 12px 0; border-bottom: 1px solid var(--color-border); }
+      .type-scale td { padding: 2px 0; border: 0; }
+      .type-scale td:first-child { width: auto; }
+      .cover { padding: 32px 24px; }
+      .proportion { flex-direction: column; height: auto; }
+      .proportion span { width: 100% !important; padding: 12px; }
+      .logo-actions { flex-direction: column; }
+      .token-export-bar { flex-direction: column; }
+      .token-export-bar .label { margin-right: 0; margin-bottom: 4px; }
+    }
+    @media (max-width: 380px) {
+      .doc-main { padding-left: 14px; padding-right: 14px; }
+      .cover { padding: 24px 18px; }
+      .panel { padding: 16px; }
+      .demo { padding: 18px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+
+    /* ============================================================
+       PRINT (MEJORA 6)
+       ============================================================ */
+    @media print {
+      @page { margin: 18mm 14mm; size: A4; }
+      body {
+        background: #fff !important;
+        color: #1f2a26 !important;
+        font-size: 11px;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .doc { display: block; }
+      .doc-nav,
+      .section-toolbar,
+      .logo-actions,
+      .token-export-bar,
+      [data-theme-toggle],
+      .btn-export,
+      .btn-logo-dl { display: none !important; }
+      .doc-main {
+        padding: 0;
+        background: none !important;
+      }
+      .doc-section {
+        padding: 24px 0 12px;
+        break-inside: avoid-page;
+        page-break-inside: avoid;
+      }
+      .doc-section + .doc-section { border-top: 1px solid #ccc; }
+      .cover {
+        min-height: auto;
+        padding: 32px;
+        margin-top: 0;
+        break-after: page;
+        background: #e0f7ee !important;
+      }
+      .cover h1 { font-size: 36px; color: #3E7C6B !important; }
+      .panel { box-shadow: none; border: 1px solid #ddd; }
+      .swatch-chip { height: 60px; }
+      .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .app-mockups { grid-template-columns: repeat(3, 1fr); }
+      .icon-grid { grid-template-columns: repeat(6, 1fr); }
+      a { text-decoration: none; }
+      h2 { color: #3E7C6B !important; }
+    }
+</style>
+
+<div class="doc">
+
+    <!-- ========== SIDEBAR ========== -->
+    <nav class="doc-nav" aria-label="Índice">
+      <a href="#portada" aria-label="Bryan Glot Fong">
+        <svg class="logo" viewBox="0 0 100 100" aria-hidden="true">
+          <path d="M50 15 L85 80 L15 80 Z" fill="currentColor"/>
+        </svg>
+      </a>
+      <ol>
+        <li><a href="#marca">La marca</a></li>
+        <li><a href="#color">Color</a></li>
+        <li><a href="#tipografia">Tipografía</a></li>
+        <li><a href="#logotipo">Logotipo</a></li>
+        <li><a href="#iconos">Iconos</a></li>
+        <li><a href="#componentes">Componentes</a></li>
+        <li><a href="#temas">Claro y oscuro</a></li>
+        <li><a href="#voz">Voz y tono</a></li>
+        <li><a href="#aplicaciones">Aplicaciones</a></li>
+        <li><a href="#cierre">Cierre</a></li>
+      </ol>
+      <div class="doc-nav-foot">
+        <button type="button" class="btn small" data-theme-toggle>Modo oscuro</button>
+        <span>Versión 1.1 · 2026</span>
+      </div>
+    </nav>
+
+    <!-- ========== MAIN ========== -->
+    <main class="doc-main">
+
+      <!-- Portada -->
+      <header class="doc-section cover" id="portada">
+        <div>
+          <p class="cover-eyebrow">Mi marca personal</p>
+          <svg class="logo" viewBox="0 0 400 120" role="img" aria-label="Bryan Glot Fong">
+            <path d="M40 30 L80 95 L0 95 Z" fill="#FF8A3D"/>
+            <text x="100" y="76" font-family="Nunito, system-ui, sans-serif" font-size="26" font-weight="300" fill="currentColor">Bryan Glot Fong</text>
+          </svg>
+        </div>
+        <h1>Manual de marca personal</h1>
+        <p class="lead">Cómo se ve, cómo se escribe y cómo se construye todo lo que lleva mi marca: desde el logotipo hasta el último botón. Este documento usa los mismos colores y tipografías que mis proyectos.</p>
+        <div class="cover-meta">
+          <span>Versión 1.1</span>
+          <span>2026</span>
+          <span>#menta · #verdeté · #naranja · #amanecer</span>
+        </div>
+      </header>
+
+      <!-- 01 La marca -->
+      <section class="doc-section" id="marca">
+        <div class="section-toolbar">
+          <button class="btn-export" data-export-section="marca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg> Copiar HTML</button>
+        </div>
+        <p class="doc-kicker">01</p>
+        <h2>La marca</h2>
+        <p class="lead">Soy desarrollador en formación. Mi marca tiene que transmitir claridad, orden y una presencia tranquila —sin ruido ni adornos innecesarios.</p>
+        <h3>Personalidad</h3>
+        <div class="grid grid-3">
+          <div class="panel menta"><h4>Casual</h4><p>Cercana, sin rigidez. Nunito Light en los títulos lo dice sin tener que explicarlo.</p></div>
+          <div class="panel"><h4>Clara</h4><p>Victor Mono en el cuerpo da el toque técnico justo: legible, honesta, sin adornos.</p></div>
+          <div class="panel"><h4>Ordenada</h4><p>Jerarquía visual clara. Un solo color de acento para lo importante.</p></div>
+        </div>
+        <h3>Principios</h3>
+        <div class="grid grid-2">
+          <div class="panel"><h4>Aire</h4><p>Dejar suficiente espacio entre elementos para que el contenido respire. No es necesario ocupar todos los espacios vacíos.</p></div>
+          <div class="panel"><h4>Orden</h4><p>Organizar los contenidos por importancia: primero el título, después el subtítulo y finalmente el texto principal.</p></div>
+          <div class="panel"><h4>Contraste</h4><p>Usar los colores de acento para destacar información importante (botones, cifras) y no solo para decorar.</p></div>
+          <div class="panel"><h4>Consistencia</h4><p>Los mismos colores y tipografías en todos los diseños para que la marca siga siendo reconocible.</p></div>
+        </div>
+      </section>
+
+      <!-- 02 Color -->
+      <section class="doc-section" id="color">
+        <div class="section-toolbar">
+          <button class="btn-export" data-export-section="color"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg> Copiar HTML</button>
+        </div>
+        <p class="doc-kicker">02</p>
+        <h2>Color</h2>
+        <p class="lead">Cuatro colores con una función clara. No se usan todos con la misma importancia: el reparto es 45 % menta, 25 % neutros, 20 % verde té y 10 % naranja/amanecer.</p>
+
+        <h3>Proporción de uso</h3>
+        <div class="proportion" aria-label="Proporción de uso del color">
+          <span class="p-menta" style="flex:45"><b>45 %</b><small>Menta</small></span>
+          <span class="p-neutro" style="flex:25"><b>25 %</b><small>Neutros</small></span>
+          <span class="p-verde" style="flex:20"><b>20 %</b><small>Verde té</small></span>
+          <span class="p-naranja" style="flex:10"><b>10 %</b><small>Naranja</small></span>
+        </div>
+        <p class="caption">La menta ocupa la mayor parte porque es el fondo. El verde té estructura, los neutros sostienen la lectura, y el naranja llama la atención solo en lo que importa.</p>
+
+        <h3>Paleta</h3>
+        <div class="swatches">
+          <article class="swatch">
+            <div class="swatch-chip"><span style="background:#A8E6CF"></span></div>
+            <div class="swatch-body">
+              <strong>Menta</strong>
+              <span class="swatch-token">--menta</span>
+              <p style="font-size:12px;color:var(--color-text-muted);margin:0">Fondos y superficies · 45 %</p>
+              <div class="swatch-codes"><div><span>HEX</span>#A8E6CF</div><div><span>RGB</span>168 230 207</div></div>
+            </div>
+          </article>
+          <article class="swatch">
+            <div class="swatch-chip"><span style="background:#3E7C6B"></span></div>
+            <div class="swatch-body">
+              <strong>Verde té</strong>
+              <span class="swatch-token">--verde-te</span>
+              <p style="font-size:12px;color:var(--color-text-muted);margin:0">Títulos, enlaces, iconos · 20 %</p>
+              <div class="swatch-codes"><div><span>HEX</span>#3E7C6B</div><div><span>RGB</span>62 124 107</div></div>
+            </div>
+          </article>
+          <article class="swatch">
+            <div class="swatch-chip"><span style="background:#FF8A3D"></span></div>
+            <div class="swatch-body">
+              <strong>Naranja</strong>
+              <span class="swatch-token">--naranja</span>
+              <p style="font-size:12px;color:var(--color-text-muted);margin:0">Botones, activos, destacados · 8 %</p>
+              <div class="swatch-codes"><div><span>HEX</span>#FF8A3D</div><div><span>RGB</span>255 138 61</div></div>
+            </div>
+          </article>
+          <article class="swatch">
+            <div class="swatch-chip"><span style="background:#F2C14E"></span></div>
+            <div class="swatch-body">
+              <strong>Amanecer</strong>
+              <span class="swatch-token">--amanecer</span>
+              <p style="font-size:12px;color:var(--color-text-muted);margin:0">Etiquetas y cifras · 2 %</p>
+              <div class="swatch-codes"><div><span>HEX</span>#F2C14E</div><div><span>RGB</span>242 193 78</div></div>
+            </div>
+          </article>
+          <article class="swatch">
+            <div class="swatch-chip"><span style="background:#f4faf7"></span><span style="background:#0f1a16"></span></div>
+            <div class="swatch-body">
+              <strong>Fondo</strong>
+              <span class="swatch-token">--color-bg</span>
+              <p style="font-size:12px;color:var(--color-text-muted);margin:0">Tinte menta muy suave</p>
+              <div class="swatch-codes"><div><span>Claro</span>#E8F3EE</div><div><span>Oscuro</span>#0F1A16</div></div>
+            </div>
+          </article>
+          <article class="swatch">
+            <div class="swatch-chip"><span style="background:#ffffff"></span><span style="background:#172620"></span></div>
+            <div class="swatch-body">
+              <strong>Superficie</strong>
+              <span class="swatch-token">--color-surface</span>
+              <p style="font-size:12px;color:var(--color-text-muted);margin:0">Tarjetas y paneles</p>
+              <div class="swatch-codes"><div><span>Claro</span>#FFFFFF</div><div><span>Oscuro</span>#172620</div></div>
+            </div>
+          </article>
+        </div>
+
+        <!-- MEJORA 2: Token export bar -->
+        <div class="token-export-bar">
+          <span class="label">Exportar tokens</span>
+          <button class="btn small secondary" id="copyTokensCSS">Copiar CSS</button>
+          <button class="btn small secondary" id="copyTokensJSON">Copiar JSON (DTCG)</button>
+        </div>
+
+        <h3>Reglas</h3>
+        <ul class="rules">
+          <li>La menta se usa en fondos, cabeceras y tarjetas destacadas. Es el color que más presencia tiene.</li>
+          <li>El verde té va en títulos, enlaces, iconos y líneas para organizar el contenido. Nunca como fondo grande.</li>
+          <li>El naranja es solo para lo importante: botones principales, elementos activos, cifras clave. No decora.</li>
+          <li>El amanecer es un segundo acento puntual: etiquetas, pequeños indicadores. Menos es más.</li>
+          <li>Los neutros (blancos y grises cálidos) sostienen la lectura. Nunca compiten con los colores de marca.</li>
+        </ul>
+      </section>
+
+      <!-- 03 Tipografía -->
+      <section class="doc-section" id="tipografia">
+        <div class="section-toolbar">
+          <button class="btn-export" data-export-section="tipografia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg> Copiar HTML</button>
+        </div>
+        <p class="doc-kicker">03</p>
+        <h2>Tipografía</h2>
+        <p class="lead">Dos familias gratuitas de Google Fonts. Nunito Light para los títulos: formas redondeadas y elegantes, sin peso, que dejan respirar al texto. Victor Mono para el cuerpo, los importes y el código: técnico, honesto, con una cursiva única.</p>
+
+        <div class="grid grid-2">
+          <div class="panel specimen">
+            <span class="swatch-token">--font-titulo · Nunito Light · 300</span>
+            <span class="big">Aa</span>
+            <strong style="font-size:22px;color:var(--color-structure);font-weight:300">Nunito Light</strong>
+            <p style="font-size:13px;color:var(--color-text-muted);margin-top:6px;font-family:var(--font-cuerpo)">ABCDEFGHIJKLMNÑOPQRSTUVWXYZ abcdefghijklmnñopqrstuvwxyz áéíóúü ¿? ¡! 0123456789 €</p>
+            <div class="weights">
+              <span style="font-weight:300">Light</span>
+              <span style="font-weight:400">Regular</span>
+              <span style="font-weight:600">Semibold</span>
+            </div>
+          </div>
+          <div class="panel specimen">
+            <span class="swatch-token">--font-cuerpo · 400–700 + itálica</span>
+            <span class="big victor">Aa</span>
+            <strong style="font-size:22px;color:var(--color-structure);font-family:var(--font-cuerpo);font-weight:700">Victor Mono</strong>
+            <p style="font-size:13px;color:var(--color-text-muted);margin-top:6px;font-family:var(--font-cuerpo)">ABCDEFGHIJKLMNÑOPQRSTUVWXYZ abcdefghijklmnñopqrstuvwxyz áéíóúü ¿? ¡! 0123456789 €</p>
+            <p style="font-size:13px;color:var(--color-structure);margin-top:4px;font-family:var(--font-cuerpo);font-style:italic">La cursiva de Victor Mono es su firma: única, técnica, con carácter.</p>
+            <div class="weights" style="font-family:var(--font-cuerpo)">
+              <span style="font-weight:400">Regular</span>
+              <span style="font-weight:500">Medium</span>
+              <span style="font-weight:700">Bold</span>
+              <span style="font-style:italic">Cursiva</span>
+            </div>
+          </div>
+        </div>
+
+        <h3>Escala</h3>
+        <table class="type-scale">
+          <tbody>
+            <tr><td style="font-family:var(--font-titulo);font-size:var(--text-display);font-weight:300;letter-spacing:-1px;line-height:1;color:var(--color-structure)">Bryan GF</td><td>Nombre destacado</td><td class="mono">--text-display · 52 / 300</td></tr>
+            <tr><td style="font-family:var(--font-titulo);font-size:var(--text-h1);font-weight:300;letter-spacing:-.5px;color:var(--color-structure)">Título de página</td><td>H1 · Nunito Light</td><td class="mono">--text-h1 · 38 / 300</td></tr>
+            <tr><td style="font-family:var(--font-titulo);font-size:var(--text-h2);font-weight:300;color:var(--color-structure)">Título de sección</td><td>H2 · Nunito Light</td><td class="mono">--text-h2 · 22 / 300</td></tr>
+            <tr><td style="font-family:var(--font-titulo);font-size:var(--text-h3);font-weight:300;color:var(--color-structure)">Título de tarjeta</td><td>H3 · Nunito Light</td><td class="mono">--text-h3 · 17 / 300</td></tr>
+            <tr><td style="font-family:var(--font-cuerpo);font-size:var(--text-body)">Texto de interfaz y párrafos con Victor Mono</td><td>Cuerpo · Victor Mono 400</td><td class="mono">--text-body · 14.5 / 400</td></tr>
+            <tr><td style="font-family:var(--font-cuerpo);font-size:var(--text-small)">Botones, filtros, notas</td><td>Pequeño · Victor Mono 400–500</td><td class="mono">--text-small · 13 / 400–500</td></tr>
+            <tr><td style="font-family:var(--font-cuerpo);font-size:var(--text-caption);color:var(--color-text-muted)">Etiquetas, fechas, metadatos</td><td>Mínimo legible · Victor Mono 400</td><td class="mono">--text-caption · 12 / 400</td></tr>
+            <tr><td style="font-family:var(--font-cuerpo);font-size:16px;font-style:italic;color:var(--color-structure)">Texto en cursiva</td><td>Énfasis · Victor Mono italic</td><td class="mono">Victor Mono Italic</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Combinación</h3>
+        <div class="grid grid-2">
+          <div class="panel">
+            <h4 style="font-family:var(--font-titulo);font-size:26px;color:var(--color-structure);font-weight:300">Nunito Light da carácter</h4>
+            <p style="margin-top:8px">Sus formas redondeadas, ahora en Light, dan una elegancia serena sin perder cercanía. Se usa en títulos, portadas y el nombre de la marca.</p>
+          </div>
+          <div class="panel">
+            <h4 style="font-family:var(--font-cuerpo);font-weight:700;font-size:16px;color:var(--color-structure)">Victor Mono da el tono técnico</h4>
+            <p style="margin-top:8px">Monoespaciada y con una cursiva inconfundible. Perfecta para el cuerpo, el código, los importes y el CV. Combina con la estética de Linux Mint y Debian.</p>
+          </div>
+        </div>
+
+        <h3>Importes y fechas</h3>
+        <div class="grid grid-2">
+          <div class="panel">
+            <div style="font-family:var(--font-mono);font-size:38px;font-weight:700;letter-spacing:-.5px">6.569<span style="color:var(--color-text-muted)">,90 €</span></div>
+            <p style="margin-top:8px">Los céntimos y el símbolo se atenúan; en tablas y listas el importe va en Victor Mono para que las cifras alineen.</p>
+          </div>
+          <div class="panel">
+            <ul class="rules" style="margin:0">
+              <li>Formato de España: <span class="mono">1.234,56 €</span></li>
+              <li>Fechas: «21 de octubre», «Hoy, 9:41»</li>
+              <li>Porcentajes con espacio: <span class="mono">72 %</span></li>
+              <li>Nada por debajo de 12 px.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 Logotipo -->
+      <section class="doc-section" id="logotipo">
+        <div class="section-toolbar">
+          <button class="btn-export" data-export-section="logotipo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg> Copiar HTML</button>
+        </div>
+        <p class="doc-kicker">04</p>
+        <h2>Logotipo</h2>
+        <p class="lead">El monograma es un triángulo naranja —referencia al «amanecer»— sobre retícula modular. Se acompaña del nombre en Nunito Light.</p>
+
+        <h3>Versión horizontal</h3>
+        <div class="grid grid-2">
+          <div class="panel" style="display:grid;place-items:center;min-height:180px;background:#f4faf7">
+            <svg viewBox="0 0 400 120" style="width:min(320px,90%)" aria-label="Bryan Glot Fong">
+              <path d="M40 30 L80 95 L0 95 Z" fill="#FF8A3D"/>
+              <text x="100" y="76" font-family="Nunito, system-ui, sans-serif" font-size="38" font-weight="300" fill="#3E7C6B">Bryan Glot Fong</text>
+            </svg>
+          </div>
+          <div class="panel" style="display:grid;place-items:center;min-height:180px;background:#3E7C6B">
+            <svg viewBox="0 0 400 120" style="width:min(320px,90%)" aria-label="Bryan Glot Fong">
+              <path d="M40 30 L80 95 L0 95 Z" fill="#F2C14E"/>
+              <text x="100" y="76" font-family="Nunito, system-ui, sans-serif" font-size="38" font-weight="300" fill="#ffffff">Bryan Glot Fong</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- MEJORA 1: Logo download buttons -->
+        <h3>Descargar logo</h3>
+        <p style="font-size:13px;color:var(--color-text-muted);margin-bottom:12px">Pulsa para copiar el código SVG de cada versión al portapapeles.</p>
+        <div class="logo-actions">
+          <button class="btn-logo-dl" data-logo="light">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>
+            Claro (sobre blanco)
+          </button>
+          <button class="btn-logo-dl" data-logo="dark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>
+            Oscuro (sobre verde)
+          </button>
+          <button class="btn-logo-dl" data-logo="mono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>
+            Monograma solo
+          </button>
+        </div>
+
+        <h3>Monograma</h3>
+        <div class="grid grid-3">
+          <div class="panel" style="display:grid;place-items:center;min-height:140px;background:#f4faf7">
+            <svg viewBox="0 0 100 100" style="width:60px"><path d="M50 15 L85 80 L15 80 Z" fill="#3E7C6B"/></svg>
+          </div>
+          <div class="panel" style="display:grid;place-items:center;min-height:140px;background:#3E7C6B">
+            <svg viewBox="0 0 100 100" style="width:60px"><path d="M50 15 L85 80 L15 80 Z" fill="#A8E6CF"/></svg>
+          </div>
+          <div class="panel" style="display:grid;place-items:center;min-height:140px;background:#FF8A3D">
+            <svg viewBox="0 0 100 100" style="width:60px"><path d="M50 15 L85 80 L15 80 Z" fill="#ffffff"/></svg>
+          </div>
+        </div>
+
+        <h3>Área de respeto</h3>
+        <div class="grid grid-2">
+          <div class="panel" style="display:grid;place-items:center;padding:40px;background:repeating-linear-gradient(45deg,transparent 0 8px,rgba(62,124,107,.06) 8px 9px);border:1px dashed var(--color-structure)">
+            <div style="background:var(--color-surface);padding:24px;border-radius:8px">
+              <svg viewBox="0 0 100 100" style="width:80px"><path d="M50 15 L85 80 L15 80 Z" fill="#FF8A3D"/></svg>
+            </div>
+            <span class="mono" style="font-size:11px;color:var(--color-structure);margin-top:12px">x = ½ altura del logo</span>
+          </div>
+          <div class="panel">
+            <h4>Reglas</h4>
+            <ul class="rules" style="margin:0">
+              <li>Alrededor del logo queda libre, como mínimo, la mitad de su altura por cada lado.</li>
+              <li>Tamaño mínimo en pantalla: <span class="mono">20 px</span> de alto.</li>
+              <li>En impresión: <span class="mono">≥ 30 mm</span> de ancho.</li>
+              <li>Por debajo de 24 px se usa el monograma solo.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Usos incorrectos</h3>
+        <div class="grid grid-4">
+          <div class="panel" style="text-align:center">
+            <svg viewBox="0 0 100 100" style="width:60px;transform:scaleX(1.5);margin:0 auto"><path d="M50 15 L85 80 L15 80 Z" fill="#3E7C6B"/></svg>
+            <p style="margin-top:12px;font-size:12px"><strong style="color:var(--naranja);font-family:var(--font-titulo);font-weight:300">No</strong> lo deformes.</p>
+          </div>
+          <div class="panel" style="text-align:center">
+            <svg viewBox="0 0 100 100" style="width:60px;transform:rotate(-15deg);margin:0 auto"><path d="M50 15 L85 80 L15 80 Z" fill="#3E7C6B"/></svg>
+            <p style="margin-top:12px;font-size:12px"><strong style="color:var(--naranja);font-family:var(--font-titulo);font-weight:300">No</strong> lo gires.</p>
+          </div>
+          <div class="panel" style="text-align:center">
+            <svg viewBox="0 0 100 100" style="width:60px;margin:0 auto"><path d="M50 15 L85 80 L15 80 Z" fill="#9b59b6"/></svg>
+            <p style="margin-top:12px;font-size:12px"><strong style="color:var(--naranja);font-family:var(--font-titulo);font-weight:300">No</strong> cambies sus colores.</p>
+          </div>
+          <div class="panel" style="text-align:center;background:#f5f5f5">
+            <svg viewBox="0 0 100 100" style="width:60px;margin:0 auto"><path d="M50 15 L85 80 L15 80 Z" fill="#dddddd"/></svg>
+            <p style="margin-top:12px;font-size:12px"><strong style="color:var(--naranja);font-family:var(--font-titulo);font-weight:300">No</strong> uses bajo contraste.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 Iconos (MEJORA 3 — mejorada) -->
+      <section class="doc-section" id="iconos">
+        <div class="section-toolbar">
+          <button class="btn-export" data-export-section="iconos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg> Copiar HTML</button>
+        </div>
+        <p class="doc-kicker">05</p>
+        <h2>Iconos</h2>
+        <p class="lead">Iconos lineales sobre retícula de 24 px: trazo de 2 px, extremos redondeados, sin relleno. Verde té por defecto; naranja solo para estados activos. Pulsa un icono para copiar su SVG.</p>
+
+        <h3>Especificaciones</h3>
+        <div class="grid grid-3">
+          <div class="panel">
+            <h4>Retícula</h4>
+            <p>24 × 24 px con 2 px de margen interior. Alineados a pixel.</p>
+          </div>
+          <div class="panel">
+            <h4>Trazo</h4>
+            <p>Grosor de 2 px, extremos redondeados (<span class="mono">round</span>), uniones redondeadas.</p>
+          </div>
+          <div class="panel">
+            <h4>Color</h4>
+            <p>Verde té por defecto. Naranja solo en estado activo o alerta. Nunca menta ni amanecer.</p>
+          </div>
+        </div>
+
+        <h3>Set del sistema</h3>
+        <div class="icon-grid" id="iconGrid">
+          <div class="icon-cell" data-icon-name="home"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>home</span></div>
+          <div class="icon-cell" data-icon-name="mail"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>mail</span></div>
+          <div class="icon-cell" data-icon-name="info"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg><span>info</span></div>
+          <div class="icon-cell" style="color:var(--naranja);border-color:var(--naranja)" data-icon-name="activity"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg><span>activity</span></div>
+          <div class="icon-cell" data-icon-name="file"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg><span>file</span></div>
+          <div class="icon-cell" data-icon-name="search"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><span>search</span></div>
+          <div class="icon-cell" data-icon-name="plus"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span>plus</span></div>
+          <div class="icon-cell" data-icon-name="close"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg><span>close</span></div>
+          <div class="icon-cell" data-icon-name="grid"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg><span>grid</span></div>
+          <div class="icon-cell" data-icon-name="user"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg><span>user</span></div>
+          <div class="icon-cell" data-icon-name="chart"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20v-7m7 7V4m7 16v-11"/></svg><span>chart</span></div>
+          <div class="icon-cell" data-icon-name="check"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>check</span></div>
+        </div>
+        <ul class="rules">
+          <li>Un icono acompaña siempre a un texto o tiene <span class="mono">aria-label</span>.</li>
+          <li>No se usan iconos decorativos. La flecha ↗ solo indica tendencia; para navegar se usa ›.</li>
+          <li>El color por defecto es verde té. El naranja se reserva para estados activos.</li>
+          <li>Tamaños permitidos: <span class="mono">13 px</span> (xs), <span class="mono">15 px</span> (sm), <span class="mono">17 px</span> (base), <span class="mono">24 px</span> (grid).</li>
+        </ul>
+      </section>
+
+      <!-- 06 Componentes (MEJORA 4 — Do/Don't) -->
+      <section class="doc-section" id="componentes">
+        <div class="section-toolbar">
+          <button class="btn-export" data-export-section="componentes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg> Copiar HTML</button>
+        </div>
+        <p class="doc-kicker">06</p>
+        <h2>Componentes</h2>
+        <p class="lead">Los componentes de la marca usan los cuatro colores con la proporción establecida. Un botón nunca es menta; una tarjeta nunca es naranja entera.</p>
+
+        <h3>Botones</h3>
+        <div class="demo">
+          <button class="btn primary">Ver proyecto</button>
+          <button class="btn secondary">Código en GitHub</button>
+          <button class="btn">Cancelar</button>
+          <button class="btn small">Ver todo →</button>
+        </div>
+        <p class="caption">Principal en naranja, secundario en verde té con borde, terciario en blanco. Uno principal por zona.</p>
+
+        <!-- MEJORA 4: Do/Don't para botones -->
+        <div class="dodont-grid">
+          <div class="dodont do">
+            <div class="dodont-header"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg> Correcto</div>
+            <div class="dodont-body">
+              <div style="display:flex;gap:8px;flex-wrap:wrap">
+                <button class="btn primary">Guardar</button>
+                <button class="btn">Cancelar</button>
+              </div>
+              <p>Un solo botón principal por zona. El secundario acompaña sin competir.</p>
+            </div>
+          </div>
+          <div class="dodont dont">
+            <div class="dodont-header"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15 9-6 6m0-6 6 6"/></svg> Incorrecto</div>
+            <div class="dodont-body">
+              <div style="display:flex;gap:8px;flex-wrap:wrap">
+                <button class="btn primary">Guardar</button>
+                <button class="btn primary">Descartar</button>
+                <button class="btn primary">Editar</button>
+              </div>
+              <p>Varios botones primarios juntos: ninguno destaca y el usuario no sabe cuál pulsar.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3>Etiquetas</h3>
+        <div class="demo">
+          <span class="tag">Pendiente</span>
+          <span class="tag menta">Enfoque</span>
+          <span class="tag green">Completado</span>
+          <span class="tag accent">Nuevo</span>
+          <span class="tag amanecer">Destacado</span>
+        </div>
+
+        <!-- MEJORA 4: Do/Don't para etiquetas -->
+        <div class="dodont-grid">
+          <div class="dodont do">
+            <div class="dodont-header"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg> Correcto</div>
+            <div class="dodont-body">
+              <div style="display:flex;gap:6px;flex-wrap:wrap">
+                <span class="tag menta">HTML</span>
+                <span class="tag menta">CSS</span>
+                <span class="tag accent">Nuevo</span>
+              </div>
+              <p>Máximo un tag de color de acento. El resto en menta o neutro.</p>
+            </div>
+          </div>
+          <div class="dodont dont">
+            <div class="dodont-header"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15 9-6 6m0-6 6 6"/></svg> Incorrecto</div>
+            <div class="dodont-body">
+              <div style="display:flex;gap:6px;flex-wrap:wrap">
+                <span class="tag accent">HTML</span>
+                <span class="tag amanecer">CSS</span>
+                <span class="tag green">JS</span>
+                <span class="tag accent">Nuevo</span>
+              </div>
+              <p>Demasiados colores de acento juntos: pierde el sentido semántico.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3>Tarjetas</h3>
+        <div class="grid grid-2">
+          <div class="panel">
+            <h4>Proyecto destacado</h4>
+            <p>Sistema ERP creado con PHP y SQLite.</p>
+            <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap">
+              <button class="btn primary small">Ver proyecto</button>
+              <button class="btn secondary small">GitHub</button>
+            </div>
+          </div>
+          <div class="panel menta">
+            <h4>Última entrada</h4>
+            <p>Cómo organicé el módulo de facturación con SQLite y vistas materializadas.</p>
+            <div style="margin-top:14px">
+              <button class="btn secondary small">Leer</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- MEJORA 4: Do/Don't para tarjetas -->
+        <div class="dodont-grid" style="margin-top:16px">
+          <div class="dodont do">
+            <div class="dodont-header"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg> Correcto</div>
+            <div class="dodont-body">
+              <p>Fondo blanco o menta suave. Un solo CTA por tarjeta. Borde sutil.</p>
+            </div>
+          </div>
+          <div class="dodont dont">
+            <div class="dodont-header"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15 9-6 6m0-6 6 6"/></svg> Incorrecto</div>
+            <div class="dodont-body">
+              <p>Fondo naranja entero en la tarjeta. Múltiples CTAs primarios. Borde grueso de color.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 07 Temas -->
+      <section class="doc-section" id="temas">
+        <div class="section-toolbar">
+          <button class="btn-export" data-export-section="temas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg> Copiar HTML</button>
+        </div>
+        <p class="doc-kicker">07</p>
+        <h2>Claro y oscuro</h2>
+        <p class="lead">El modo oscuro es opcional pero coherente: el fondo se vuelve verde muy oscuro, la menta sube de luminosidad y el naranja se mantiene. Los cuatro colores siguen presentes.</p>
+        <div class="grid grid-2">
+          <div class="panel" style="background:#e8f3ee;color:#1f2a26;text-align:center;padding:48px 22px;border-color:#dbe7e3">
+            <strong style="font-family:var(--font-titulo);font-size:22px;color:#3E7C6B;font-weight:300">Claro</strong>
+            <p style="color:#5a6b64;margin-top:6px;font-size:13px">Fondo #E8F3EE · superficie #FFFFFF</p>
+          </div>
+          <div class="panel" style="background:#0f1a16;color:#e0f0e8;text-align:center;padding:48px 22px;border-color:#243a32">
+            <strong style="font-family:var(--font-titulo);font-size:22px;color:#6ab598;font-weight:300">Oscuro</strong>
+            <p style="color:#8fb5a5;margin-top:6px;font-size:13px">Fondo #0F1A16 · superficie #172620</p>
+          </div>
+        </div>
+        <ul class="rules">
+          <li>El tema se aplica con <span class="mono">data-theme="dark"</span> en <span class="mono">&lt;html&gt;</span> y se recuerda por usuario.</li>
+          <li>Al imprimir, todo sale en claro.</li>
+        </ul>
+      </section>
+
+      <!-- 08 Voz y tono -->
+      <section class="doc-section" id="voz">
+        <div class="section-toolbar">
+          <button class="btn-export" data-export-section="voz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg> Copiar HTML</button>
+        </div>
+        <p class="doc-kicker">08</p>
+        <h2>Voz y tono</h2>
+        <p class="lead">Escribo como habla alguien que sabe de lo suyo y respeta tu tiempo. Español de España, de tú, frases cortas y datos concretos.</p>
+        <table class="data-table">
+          <thead>
+            <tr><th>Evitar</th><th>Mejor</th><th>Por qué</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>¡Bienvenido de nuevo! 👋</td><td>Miércoles, 21 de octubre</td><td>Informar, no saludar.</td></tr>
+            <tr><td>Error: datos inválidos</td><td>Revisa el CIF: el dígito de control no cuadra.</td><td>Decir qué hacer.</td></tr>
+            <tr><td>¡Genial! Tu factura se ha creado con éxito 🎉</td><td>Factura F-2026-0415 emitida</td><td>Confirmar con el dato.</td></tr>
+            <tr><td>No hay datos disponibles</td><td>Todavía no tiene facturas · Nueva factura</td><td>Un vacío ofrece el siguiente paso.</td></tr>
+            <tr><td>Introducí / Hacé clic</td><td>Escribe / Pulsa</td><td>Español de España, de tú.</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:20px">
+          <div class="voice-item si"><strong>Sí:</strong> He desarrollado una API REST con PHP y SQLite para gestionar facturas.</div>
+          <div class="voice-item no"><strong>No:</strong> Soy un apasionado de la programación y hago cosas muy chulas.</div>
+        </div>
+        <ul class="rules">
+          <li>Sin emojis ni signos de exclamación en la interfaz.</li>
+          <li>Mayúscula solo al principio de la frase: «Nueva factura», no «Nueva Factura».</li>
+          <li>Los datos de ejemplo son verosímiles: nombres, CIF, direcciones e importes reales.</li>
+        </ul>
+      </section>
+
+      <!-- 09 Aplicaciones (MEJORA 5 — mobile mejorado) -->
+      <section class="doc-section" id="aplicaciones">
+        <div class="section-toolbar">
+          <button class="btn-export" data-export-section="aplicaciones"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg> Copiar HTML</button>
+        </div>
+        <p class="doc-kicker">09</p>
+        <h2>Aplicaciones</h2>
+        <p class="lead">Dónde está la marca hoy: portafolio, GitHub, CV. Cada pieza usa los mismos colores, tipografías y el monograma.</p>
+
+        <div class="app-mockups">
+          <div class="app-card">
+            <div class="app-browser-top"><i></i><i></i><i></i></div>
+            <div class="app-browser-body">
+              <div>
+                <small>MI PORTAFOLIO · DAM</small>
+                <h3>Bryan Glot<br>Fong</h3>
+              </div>
+              <span class="link">Ver mis proyectos →</span>
+            </div>
+          </div>
+          <div class="app-card app-stationery">
+            <div class="app-paper">
+              <strong>Bryan Glot Fong</strong>
+              <div class="line"></div>
+              <div class="line short"></div>
+              <div class="line"></div>
+              <small>Valencia · bryanglot@gmail.com</small>
+            </div>
+          </div>
+          <div class="app-card app-social">
+            <div class="dot"></div>
+            <small style="font-size:11px;letter-spacing:2px;opacity:.8;font-family:var(--font-mono)">BRYAN GF</small>
+            <h3>DAM<br>2026</h3>
+            <div class="linea"></div>
+          </div>
+        </div>
+
+        <h3>Dónde está publicada</h3>
+        <table class="data-table">
+          <thead>
+            <tr><th>Dónde</th><th>Dirección</th><th>Marca</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>GitHub</td><td class="mono">github.com/bryanglot</td><td>Avatar con el monograma</td></tr>
+            <tr><td>Portafolio</td><td class="mono">bryanglot.dev</td><td>Marca aplicada</td></tr>
+            <tr><td>Currículum</td><td class="mono">bryanglot.dev/cv</td><td>Marca aplicada</td></tr>
+            <tr><td>LinkedIn</td><td class="mono">linkedin.com/in/bryanglot</td><td>Foto personal + banner con la marca</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 10 Cierre -->
+      <section class="doc-section" id="cierre">
+        <p class="doc-kicker">10</p>
+        <h2>Cierre</h2>
+        <p class="lead">Cuando no sepas cómo continuar un diseño, usa menos colores de acento y deja más espacio libre. La marca es menta, verde té, neutros y un toque de naranja.</p>
+        <div class="panel menta" style="margin-top:20px;text-align:center;padding:48px 22px">
+          <svg viewBox="0 0 300 100" style="width:min(240px,80%);margin:0 auto 20px" aria-label="Bryan Glot Fong">
+            <path d="M50 15 L85 80 L15 80 Z" fill="#FF8A3D"/>
+            <text x="110" y="68" font-family="Nunito, system-ui, sans-serif" font-size="28" font-weight="300" fill="#3E7C6B">Bryan Glot Fong</text>
+          </svg>
+          <p style="color:var(--verde-te);font-weight:600">Manual de marca personal · v1.1</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    // ============================================================
+    // THEME TOGGLE
+    // ============================================================
+    (function () {
+      var root = document.documentElement;
+      var toggle = document.querySelector('[data-theme-toggle]');
+      var meta = document.querySelector('meta[name="theme-color"]');
+
+      function applyTheme(theme) {
+        root.dataset.theme = theme;
+        if (toggle) toggle.textContent = theme === 'dark' ? 'Modo claro' : 'Modo oscuro';
+        if (meta) meta.content = theme === 'dark' ? '#0f1a16' : '#e8f3ee';
+        try { localStorage.setItem('bgf-theme', theme); } catch (e) {}
+      }
+
+      var saved = null;
+      try { saved = localStorage.getItem('bgf-theme'); } catch (e) {}
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      applyTheme(saved === 'dark' ? 'dark' : saved === 'light' ? 'light' : prefersDark ? 'dark' : 'light');
+
+      if (toggle) {
+        toggle.addEventListener('click', function () {
+          applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark');
+        });
+      }
+    })();
+
+    // ============================================================
+    // SCROLL SPY
+    // ============================================================
+    (function () {
+      var links = new Map();
+      document.querySelectorAll('.doc-nav ol a').forEach(function (a) {
+        var href = a.getAttribute('href');
+        if (href && href.charAt(0) === '#') links.set(href.slice(1), a);
+      });
+      var sections = document.querySelectorAll('.doc-section[id]');
+      if (!sections.length || !links.size) return;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          links.forEach(function (a) { a.classList.remove('is-current'); });
+          var current = links.get(entry.target.id);
+          if (current) current.classList.add('is-current');
+        });
+      }, { rootMargin: '-30% 0px -60% 0px' });
+      sections.forEach(function (s) { observer.observe(s); });
+    })();
+
+    // ============================================================
+    // MEJORA 1: LOGO SVG COPY
+    // ============================================================
+    (function () {
+      var logos = {
+        light: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120">\n  <path d="M40 30 L80 95 L0 95 Z" fill="#FF8A3D"/>\n  <text x="100" y="76" font-family="Nunito, system-ui, sans-serif" font-size="38" font-weight="300" fill="#3E7C6B">Bryan Glot Fong</text>\n</svg>',
+        dark: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120">\n  <path d="M40 30 L80 95 L0 95 Z" fill="#F2C14E"/>\n  <text x="100" y="76" font-family="Nunito, system-ui, sans-serif" font-size="38" font-weight="300" fill="#ffffff">Bryan Glot Fong</text>\n</svg>',
+        mono: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">\n  <path d="M50 15 L85 80 L15 80 Z" fill="#FF8A3D"/>\n</svg>'
+      };
+
+      document.querySelectorAll('.btn-logo-dl').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var key = btn.dataset.logo;
+          var svg = logos[key];
+          if (!svg) return;
+          try {
+            navigator.clipboard.writeText(svg).then(function () {
+              btn.classList.add('copied');
+              var orig = btn.textContent;
+              btn.textContent = 'SVG copiado';
+              setTimeout(function () { btn.classList.remove('copied'); btn.textContent = orig; }, 1500);
+            }).catch(function () {});
+          } catch (e) {}
+        });
+      });
+    })();
+
+    // ============================================================
+    // MEJORA 2: TOKEN EXPORT
+    // ============================================================
+    (function () {
+      var cssTokens = "/* Bryan Glot Fong · Design Tokens */\n:root {\n  --menta: #A8E6CF;\n  --menta-soft: #d5ede4;\n  --verde-te: #3E7C6B;\n  --verde-te-hover: #2f6254;\n  --verde-te-soft: #e0f0e8;\n  --naranja: #FF8A3D;\n  --naranja-hover: #e67528;\n  --naranja-soft: #fff0e5;\n  --amanecer: #F2C14E;\n  --amanecer-soft: #fdf5e3;\n\n  --neutro-50: #f4faf7;\n  --neutro-100: #e8f3ee;\n  --neutro-200: #dbe7e3;\n  --neutro-300: #c5d6d0;\n  --neutro-500: #5a6b64;\n  --neutro-700: #2a3d36;\n  --neutro-900: #1a3a32;\n\n  --color-bg: var(--neutro-100);\n  --color-surface: #ffffff;\n  --color-surface-alt: var(--neutro-50);\n  --color-text: #1f2a26;\n  --color-text-muted: var(--neutro-500);\n  --color-heading: var(--verde-te);\n  --color-border: var(--neutro-200);\n  --color-border-strong: var(--neutro-300);\n  --color-accent: var(--naranja);\n  --color-accent-hover: var(--naranja-hover);\n  --color-on-accent: #ffffff;\n\n  --font-titulo: 'Nunito', system-ui, sans-serif;\n  --font-cuerpo: 'Victor Mono', ui-monospace, monospace;\n\n  --radius-card: 16px;\n  --radius-tile: 12px;\n  --radius-control: 10px;\n  --radius-tag: 6px;\n  --radius-pill: 999px;\n\n  --shadow-card: 0 10px 30px rgba(41,30,50,.05);\n  --shadow-hover: 0 4px 20px rgba(62,124,107,.08);\n}\n\n:root[data-theme=\"dark\"] {\n  --color-bg: #0f1a16;\n  --color-surface: #172620;\n  --color-surface-alt: #1e3029;\n  --color-text: #e0f0e8;\n  --color-text-muted: #8fb5a5;\n  --color-heading: #6ab598;\n  --color-border: #243a32;\n  --color-border-strong: #2f4a41;\n}";
+
+      var jsonTokens = JSON.stringify({
+        color: {
+          menta: { $type: "color", $value: "#A8E6CF" },
+          "menta-soft": { $type: "color", $value: "#d5ede4" },
+          "verde-te": { $type: "color", $value: "#3E7C6B" },
+          naranja: { $type: "color", $value: "#FF8A3D" },
+          amanecer: { $type: "color", $value: "#F2C14E" },
+          bg: { $type: "color", $value: "#e8f3ee", $extensions: { mode: { dark: "#0f1a16" } } },
+          surface: { $type: "color", $value: "#ffffff", $extensions: { mode: { dark: "#172620" } } },
+          text: { $type: "color", $value: "#1f2a26", $extensions: { mode: { dark: "#e0f0e8" } } },
+          "text-muted": { $type: "color", $value: "#5a6b64", $extensions: { mode: { dark: "#8fb5a5" } } },
+          heading: { $type: "color", $value: "#3E7C6B", $extensions: { mode: { dark: "#6ab598" } } },
+          border: { $type: "color", $value: "#dbe7e3", $extensions: { mode: { dark: "#243a32" } } },
+          accent: { $type: "color", $value: "#FF8A3D" },
+          "on-accent": { $type: "color", $value: "#ffffff" }
+        },
+        font: {
+          titulo: { $type: "fontFamily", $value: "'Nunito', system-ui, sans-serif" },
+          cuerpo: { $type: "fontFamily", $value: "'Victor Mono', ui-monospace, monospace" }
+        },
+        radius: {
+          card: { $type: "dimension", $value: "16px" },
+          tile: { $type: "dimension", $value: "12px" },
+          control: { $type: "dimension", $value: "10px" },
+          tag: { $type: "dimension", $value: "6px" },
+          pill: { $type: "dimension", $value: "999px" }
+        },
+        space: {
+          1: { $type: "dimension", $value: "2px" },
+          2: { $type: "dimension", $value: "4px" },
+          3: { $type: "dimension", $value: "6px" },
+          4: { $type: "dimension", $value: "8px" },
+          5: { $type: "dimension", $value: "10px" },
+          6: { $type: "dimension", $value: "12px" },
+          7: { $type: "dimension", $value: "15px" },
+          8: { $type: "dimension", $value: "18px" },
+          9: { $type: "dimension", $value: "22px" },
+          10: { $type: "dimension", $value: "34px" },
+          layout: { $type: "dimension", $value: "clamp(18px, 1.8vw, 34px)" }
+        }
+      }, null, 2);
+
+      function copyText(text, btn) {
+        try {
+          navigator.clipboard.writeText(text).then(function () {
+            var orig = btn.textContent;
+            btn.textContent = 'Copiado';
+            btn.classList.add('copied');
+            setTimeout(function () { btn.textContent = orig; btn.classList.remove('copied'); }, 1500);
+          }).catch(function () {});
+        } catch (e) {}
+      }
+
+      var cssBtn = document.getElementById('copyTokensCSS');
+      var jsonBtn = document.getElementById('copyTokensJSON');
+      if (cssBtn) cssBtn.addEventListener('click', function () { copyText(cssTokens, cssBtn); });
+      if (jsonBtn) jsonBtn.addEventListener('click', function () { copyText(jsonTokens, jsonBtn); });
+    })();
+
+    // ============================================================
+    // MEJORA 3: ICON COPY (click to copy SVG)
+    // ============================================================
+    (function () {
+      document.getElementById('iconGrid').addEventListener('click', function (e) {
+        var cell = e.target.closest('.icon-cell');
+        if (!cell) return;
+        var svg = cell.querySelector('svg');
+        if (!svg) return;
+        var code = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + svg.innerHTML + '</svg>';
+        try {
+          navigator.clipboard.writeText(code).then(function () {
+            cell.classList.add('copied');
+            var span = cell.querySelector('span');
+            var orig = span.textContent;
+            span.textContent = 'copiado';
+            setTimeout(function () { cell.classList.remove('copied'); span.textContent = orig; }, 1200);
+          }).catch(function () {});
+        } catch (e) {}
+      });
+    })();
+
+    // ============================================================
+    // MEJORA 7: SECTION EXPORT (copy section HTML+CSS)
+    // ============================================================
+    (function () {
+      document.querySelectorAll('.btn-export[data-export-section]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var id = btn.dataset.exportSection;
+          var section = document.getElementById(id);
+          if (!section) return;
+
+          // Clone and remove toolbar
+          var clone = section.cloneNode(true);
+          var toolbar = clone.querySelector('.section-toolbar');
+          if (toolbar) toolbar.remove();
+
+          var html = '<!-- Sección: ' + id + ' -->\n' + clone.outerHTML;
+
+          try {
+            navigator.clipboard.writeText(html).then(function () {
+              var orig = btn.innerHTML;
+              btn.classList.add('copied');
+              btn.textContent = 'HTML copiado';
+              setTimeout(function () { btn.classList.remove('copied'); btn.innerHTML = orig; }, 1500);
+            }).catch(function () {});
+          } catch (e) {}
+        });
+      });
+    })();
+</script>
+
+</body></html>
